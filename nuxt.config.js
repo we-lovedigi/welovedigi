@@ -1,8 +1,9 @@
+import smConfig from "./sm.json"
+
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
+
   target: 'static',
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'welovedigi',
     htmlAttrs: {
@@ -19,34 +20,41 @@ export default {
     ]
   },
 
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-  ],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
   ],
 
-  // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+	'@nuxtjs/prismic'
   ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
+  prismic: {
+    endpoint: 'https://welovedigi.cdn.prismic.io/api/v2',
+    modern: true
+    /* see configuration for more */
+  },
+
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxt/image',
+    '@nuxtjs/style-resources',
+	["@nuxtjs/prismic", {
+		endpoint: smConfig.apiEndpoint|| ""
+	}]
   ],
 
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  styleResources: {
+    // your settings here
+    sass: [], // alternative: scss
+    stylus: ["./assets/sharedstyles/*.styl"]
+  },
+
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+	transpile: ["@prismicio/vue"]
   }
 }

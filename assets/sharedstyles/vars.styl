@@ -1,0 +1,110 @@
+// Assetpath relativ
+$assetspath = "@assets/"
+
+// 🎨 Colors
+my-colors = {
+	black: #1c1c1c
+	white: #ffffff
+	text: #686A6F
+	text-light: #999B9F
+	primary: #BD268E
+	secondary: #68dcc8
+	light-blue:#f2fafe
+	success: #478F71
+	warning: #F26922
+	error: #F26922
+}
+for name, color in my-colors
+	define('$'+name color)
+
+
+// 🤙 Grid
+$bp1=769px
+$bp-landscape=1081px
+$bp2=1500px
+
+bp(var)
+	@media screen and (max-width:var)
+		{block}
+mobile()
+	@media screen and (max-width:$bp1)
+		{block}
+	@media screen and (max-height:512px)
+		{block}
+landscape()
+	@media screen and (orientation: landscape)
+		{block}
+
+$pagewidth = 1440px
+
+section()
+	max-width $pagewidth
+	margin 0 auto
+	padding 80px 40px
+	+bp($bp1)
+		padding 40px 20px
+
+// 💌 Fonts
+regular()
+	font-family 'Inter-Regular', sans-serif
+	font-weight normal
+
+bold()
+	font-family 'Inter-Bold', sans-serif
+	font-weight normal
+
+headline()
+	font-family 'Inter-Bold', sans-serif
+	font-weight normal
+
+headlinebold()
+	font-family 'Inter-Bold', sans-serif
+	font-weight normal
+
+my-shadow(color = $black)
+	box-shadow 0 14px 30px -5px rgba(color,.2), 0 7px 15px -10px rgba(color,.3),0 -7px 15px -5px rgba(color,.02)
+my-shadow-hover(color = $black)
+	box-shadow 0 28px 60px -10px rgba(color,.2), 0 14px 30px -20px rgba(color,.3),0 -12px 30px -10px rgba(color,.02)
+
+gradient(direction = to top right)
+	background-image linear-gradient(direction, $secondary 0%, $primary 100%)
+
+imgFilter()
+	filter saturate(80%) contrast(90%) sepia(0%) brightness(90%)
+	transition all 300ms ease
+
+$inputBg = #F4F5F8
+formBg()
+	padding 1.2rem 2.4rem
+	line-height 1.6
+	display block
+	width 100%
+	background $inputBg
+	border 1px solid darken($inputBg,10%)
+	border-radius .7rem
+	&::placeholder
+		color darken($inputBg,15%)
+	&:focus,&:active, &.is-selected
+		border 1px solid $primary
+		outline none
+		box-shadow 0 0 10px rgba($primary,.1)
+		background lighten($inputBg,50%)
+
+// Animation 🏎
+ease = cubic-bezier(0.4, 0, 0.2, 1)
+timing = .5s
+
+animationbooster()
+	transform translateZ(0)
+	perspective 1000
+	backface-visibility hidden
+	// will-change transform //CHROME Bug
+animationLoop(until = 10, milsec = 166)
+	for i in (1..until)
+		&:nth-child({i})
+			animation-delay (milsec * i)
+
+transitionLoop(until = 10, milsec = 166ms)
+	for i in (1..until)
+		&:nth-child({i})
+			transition-delay (milsec * i)

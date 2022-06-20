@@ -1,0 +1,66 @@
+{
+  "id": "general",
+  "label": "General",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "linkedinUrl": {
+        "type": "Text",
+        "config": {
+          "label": "Linkedin Url",
+          "placeholder": ""
+        }
+      },
+      "instagramUrl": {
+        "type": "Text",
+        "config": {
+          "label": "Instagram Url",
+          "placeholder": ""
+        }
+      },
+      "twitterUrl": {
+        "type": "Text",
+        "config": {
+          "label": "Twitter Url",
+          "placeholder": ""
+        }
+      },
+      "addressStreet": {
+        "type": "Text",
+        "config": {
+          "label": "Address Street",
+          "placeholder": ""
+        }
+      },
+      "addressCity": {
+        "type": "Text",
+        "config": {
+          "label": "Address City",
+          "placeholder": ""
+        }
+      },
+      "addressCountry": {
+        "type": "Text",
+        "config": {
+          "label": "Address Country",
+          "placeholder": ""
+        }
+      },
+      "addressPhone": {
+        "type": "Text",
+        "config": {
+          "label": "Address Phone",
+          "placeholder": ""
+        }
+      },
+      "addressEmail": {
+        "type": "Text",
+        "config": {
+          "label": "Address Email",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

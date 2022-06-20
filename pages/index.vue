@@ -1,9 +1,12 @@
-<template>
-  <Tutorial/>
+<template lang="pug">
+	LandingPage
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
 }
 </script>
+
+<style lang="stylus">
+
+</style>

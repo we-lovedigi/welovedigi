@@ -1,0 +1,35 @@
+{
+  "_cts": {
+    "imprint": {},
+    "teammember": {
+      "image": {
+        "content": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+      },
+      "name": {
+        "content": "John Doe"
+      }
+    },
+    "event": {},
+    "product": {
+      "bodytext": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "casestudie": {},
+    "general": {}
+  },
+  "slices": {
+    "TeamMember": {
+      "default": {
+        "items": {
+          "image": {
+            "content": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
+          }
+        }
+      }
+    }
+  }
+}

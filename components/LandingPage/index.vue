@@ -2,8 +2,7 @@
 main
 	LandingPageHero
 	PrismicTest
-	code
-		pre {{$store.state.content}}
+	LazyProductsList
 </template>
 
 <script>

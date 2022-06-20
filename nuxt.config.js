@@ -44,6 +44,11 @@ export default {
 	}]
   ],
 
+  image: {
+    provider: "prismic",
+    prismic: {}
+  },
+
   styleResources: {
     // your settings here
     sass: [], // alternative: scss

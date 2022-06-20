@@ -53,6 +53,7 @@ export default {
 		text-align center
 		max-width 92rem
 		margin 0 auto
+		color $white
 		p
 			color $white
 			bold()

@@ -1,10 +1,10 @@
 {
-  "id": "5213a7df-80bf-49c9-8cfa-ef72c608c69d",
-  "uid": "vero-id-nam",
+  "id": "38e0e296-f634-4013-b322-83c21318dc72",
+  "uid": "sint-rerum-natus",
   "type": "product",
   "data": {
-    "title": "productize customized schemas",
-    "subtitle": "streamline compelling content",
+    "title": "facilitate web-enabled infomediaries",
+    "subtitle": "reinvent transparent e-commerce",
     "image": {
       "dimensions": {
         "width": 900,
@@ -12,12 +12,12 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
     },
     "bodytext": [
       {
         "type": "paragraph",
-        "text": "Et duis ad id eiusmod voluptate cillum culpa et nisi Lorem nulla ipsum do.",
+        "text": "Commodo veniam ex et laboris sunt ea sit. Quis eiusmod cillum pariatur in laboris eu.",
         "spans": []
       }
     ]

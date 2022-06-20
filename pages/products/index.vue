@@ -1,10 +1,9 @@
 <template lang="pug">
-	LandingPage
+	ProductsList
 </template>
 
 <script>
 export default {
-	layout: 'lightNav'
 }
 </script>
 

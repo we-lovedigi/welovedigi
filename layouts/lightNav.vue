@@ -1,6 +1,6 @@
 <template lang="pug">
 	.app
-		Nav
+		Nav(light)
 		nuxt
 		LazyFooter
 		code

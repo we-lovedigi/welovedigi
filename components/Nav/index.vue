@@ -1,8 +1,9 @@
 <template lang="pug">
-	nav.nav(:class="{'is-sticky' : stickyBar}")
+	nav.nav(:class="{'is-sticky' : stickyBar, 'is-light' : light}")
 		section
-			.nav__logo
-				HelperLogo
+			nuxt-link(to="/").nav__logo
+				img(:src="logoWhite" v-if="light && !stickyBar")
+				img(:src="logoBlack" v-else)
 			ul.nav__menu
 				li(v-for="m in $store.state.metadata.navItems")
 					nuxt-link(:to="m.link") {{m.name}}
@@ -13,12 +14,21 @@
 </template>
 
 <script>
-
+import logoWhite from './assets/logo_white.png'
+import logoBlack from './assets/logo_black.png'
 export default {
+	props:{
+		light:{
+			type: Boolean,
+			default: false
+		}
+	},
 	data(){
 		return{
 			burgerOpen: false,
-			stickyBar: false
+			stickyBar: false,
+			logoWhite,
+			logoBlack
 		}
 	},
 	methods:{
@@ -81,15 +91,20 @@ export default {
 		+mobile()
 			display none
 	a
-		color $white
+		color $black
 		bold()
 		font-size 1.4rem
+	&.is-light
+		a
+			color $white
 	&.is-sticky
-		background rgba(black,.33)
+		background rgba(white,.666)
 		backdrop-filter blur(18px) saturate(160%)
 		transition background 300ms ease
 		background-clip padding-box
-		border-bottom 2px solid rgba($black,.2)
+		border-bottom 2px solid rgba($black,.07)
+		a
+			color $black
 	&__burger
 		display none
 		cursor pointer

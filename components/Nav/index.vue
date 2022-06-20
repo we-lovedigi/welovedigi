@@ -99,7 +99,7 @@ export default {
 		a
 			color $white
 	&.is-sticky
-		background rgba(white,.666)
+		background rgba(white,.85)
 		backdrop-filter blur(18px) saturate(160%)
 		transition background 300ms ease
 		background-clip padding-box

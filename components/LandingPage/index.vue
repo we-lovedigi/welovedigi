@@ -1,8 +1,8 @@
 <template lang="pug">
 main
 	LandingPageHero
-	PrismicTest
 	LazyProductsList
+	LazyCaseStudiesSlider
 </template>
 
 <script>

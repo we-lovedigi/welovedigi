@@ -21,6 +21,7 @@ export default {
   },
 
   plugins: [
+	{ src: '~plugins/vue-carousel-3d', ssr: false }
   ],
 
   components: true,

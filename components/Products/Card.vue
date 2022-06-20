@@ -1,6 +1,6 @@
 <template lang="pug">
-	nuxt-link(:to="'/products/' + product.uid").productcard
-		.productcard__image
+	.productcard
+		nuxt-link(:to="'/products/' + product.uid").productcard__image
 			nuxt-picture(:src="product.data.image.url" alt="image")
 		h5.productcard__subtitle {{product.data.subtitle}}
 		h4.productcard__title {{product.data.title}}
@@ -26,6 +26,7 @@ export default {
 		position relative
 		width 100%
 		aspect-ratio 10/12
+		display block
 		img,picture
 			position absolute
 			top 0

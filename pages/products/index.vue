@@ -1,4 +1,5 @@
 <template lang="pug">
+.productspage
 	ProductsList
 </template>
 
@@ -8,5 +9,6 @@ export default {
 </script>
 
 <style lang="stylus">
-
+.productspage
+	margin-top 8rem
 </style>

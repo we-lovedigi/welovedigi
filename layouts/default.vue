@@ -3,8 +3,8 @@
 		Nav
 		nuxt
 		LazyFooter
-		code
-			pre {{$store.state.content}}
+		//- code
+		//- 	pre {{$store.state.content}}
 </template>
 
 <script>

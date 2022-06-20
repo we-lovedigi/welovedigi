@@ -17,7 +17,7 @@ export default {
 	padding 0 2rem
 	&__wrapper
 		section()
-		background linear-gradient(to top right, $secondary -10%, $primary 50%, $error 120%)
+		background linear-gradient(to top right, $secondary -10%, #BD268E 50%, $error 120%)
 		text-align center
 		clip-path polygon(0 0, 100% 0, 100% 90%, 97% 100%, 0% 100%)
 		filter saturate(110%)

@@ -62,7 +62,7 @@ export default {
 	top 0
 	left 0
 	width 100%
-	border-bottom 1px solid rgba($white,.1)
+	border-bottom 1px solid rgba($black,.1)
 	z-index 100
 	transition background 300ms ease
 	section
@@ -95,6 +95,7 @@ export default {
 		bold()
 		font-size 1.4rem
 	&.is-light
+		border-bottom 1px solid rgba($white,.1)
 		a
 			color $white
 	&.is-sticky

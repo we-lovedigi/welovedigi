@@ -11,24 +11,27 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "TeamMember",
       "primary": {
-        "title": {
-          "type": "StructuredText",
+        "name": {
+          "type": "Text",
           "config": {
-            "single": "heading1",
-            "label": "Title",
-            "placeholder": "This is where it all begins..."
+            "label": "Name",
+            "placeholder": ""
           }
         },
-        "description": {
-          "type": "StructuredText",
+        "jobTitle": {
+          "type": "Text",
           "config": {
-            "single": "paragraph",
-            "label": "Description",
-            "placeholder": "A nice description of your product"
+            "label": "Job Title",
+            "placeholder": ""
           }
-        }
-      },
-      "items": {
+        },
+        "linkedinUrl": {
+          "type": "Text",
+          "config": {
+            "label": "Linkedin Url",
+            "placeholder": ""
+          }
+        },
         "image": {
           "type": "Image",
           "config": {
@@ -36,8 +39,25 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "hasVideo": {
+          "type": "Boolean",
+          "config": {
+            "label": "Has a video",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "youtubeVideoID": {
+          "type": "Text",
+          "config": {
+            "label": "Youtube Video ID",
+            "placeholder": ""
+          }
         }
       },
+      "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

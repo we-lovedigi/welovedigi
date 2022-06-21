@@ -67,10 +67,13 @@ export const actions ={
 		commit('setContent', {events: events.results})
 
 		// TEAM MEMBERS
-		const teammembers = await this.$prismic.api.query(
-			this.$prismic.predicates.at('document.type','teammember')
-		)
-		commit('setContent', {teammembers: teammembers.results})
+		// const teammembers = await this.$prismic.api.query(
+		// 	this.$prismic.predicates.at('document.type','teammember')
+		// )
+		const founders =  await this.$prismic.api.getSingle('founders')
+		commit('setContent', {founders})
+		const joiners =  await this.$prismic.api.getSingle('joiners')
+		commit('setContent', {joiners})
 
 		// Imprint
 		const metadata =  await this.$prismic.api.getSingle('general')

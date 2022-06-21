@@ -1,0 +1,21 @@
+{
+  "id": "joiners",
+  "label": "Team Member Joiners",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "team_member": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

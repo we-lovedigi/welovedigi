@@ -1,15 +1,9 @@
 <template lang="pug">
-main
-	LandingPageHero
-	LazyProductsList
-	LazyCaseStudiesSlider
-	LazyMeetTheTeamSection
+	MeetTheTeamSection
 </template>
 
 <script>
-
 export default {
-
 }
 </script>
 

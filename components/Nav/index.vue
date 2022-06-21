@@ -9,6 +9,10 @@
 					nuxt-link(:to="m.link") {{m.name}}
 			.nav__cta
 				nuxt-link(to="/scheduleacall") Schedule a call
+				.dot
+				.dot
+				.dot
+				.dot
 			.nav__burger
 				include ./assets/burger.svg
 </template>
@@ -88,8 +92,31 @@ export default {
 			margin-left 4.2rem
 	&__cta
 		justify-self end
+		position relative
+		padding 1.2rem 2rem
+		border 1px solid rgba($black,.1)
+		cursor pointer
 		+mobile()
 			display none
+		.dot
+			position absolute
+			width .2rem
+			height @width
+			background $black
+			&:nth-child(2)
+				top -.1rem
+				left -.1rem
+			&:nth-child(3)
+				top -.1rem
+				right -.1rem
+			&:nth-child(4)
+				right -.1rem
+				bottom -.1rem
+			&:nth-child(5)
+				left -.1rem
+				bottom -.1rem
+		&:hover
+			border 1px solid rgba($black,.3)
 	a
 		color $black
 		bold()
@@ -98,6 +125,12 @@ export default {
 		border-bottom 1px solid rgba($white,.1)
 		a
 			color $white
+		.nav__cta
+			border 1px solid rgba($white,.1)
+			.dot
+				background $white
+			&:hover
+				border 1px solid rgba($white,.3)
 	&.is-sticky
 		background rgba(white,.85)
 		backdrop-filter blur(18px) saturate(160%)
@@ -106,6 +139,12 @@ export default {
 		border-bottom 2px solid rgba($black,.07)
 		a
 			color $black
+		.nav__cta
+			border 1px solid rgba($black,.1)
+			.dot
+				background $black
+			&:hover
+				border 1px solid rgba($black,.3)
 	&__burger
 		display none
 		cursor pointer

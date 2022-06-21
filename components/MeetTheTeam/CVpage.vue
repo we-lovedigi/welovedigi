@@ -7,6 +7,8 @@
 			prismic-rich-text(:field="doc.primary.detailedCV")
 		.detailedcv__image
 			nuxt-picture(:src="doc.primary.image.url" alt="image")
+			HelperButton Linkedin
+			HelperButton Schedule a call
 </template>
 
 <script>
@@ -22,10 +24,12 @@ export default {
 
 <style lang="stylus">
 .detailedcv
-	padding-top 8rem
 	section
 		section()
 		display grid
 		grid-template-columns 1fr 1fr
 		gap 6rem
+	&__text
+		h3,h2,h4
+			margin-top 2.4rem
 </style>

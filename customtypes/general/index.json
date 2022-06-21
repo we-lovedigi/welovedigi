@@ -60,6 +60,13 @@
           "label": "Address Email",
           "placeholder": ""
         }
+      },
+      "footerText": {
+        "type": "Text",
+        "config": {
+          "label": "Footer Text",
+          "placeholder": "The next below the logo"
+        }
       }
     }
   }

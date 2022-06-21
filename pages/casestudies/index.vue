@@ -1,5 +1,10 @@
 <template lang="pug">
-	CaseStudiesList
+main
+	HelperPageHeader
+		h5 Have a look
+		h1 Case Studies & stories
+	HelperBackground
+		CaseStudiesList
 </template>
 
 <script>

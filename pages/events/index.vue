@@ -1,5 +1,9 @@
 <template lang="pug">
-	EventsPage
+main
+	HelperPageHeader
+		h5 Become part
+		h1 Events
+	EventsList
 </template>
 
 <script>

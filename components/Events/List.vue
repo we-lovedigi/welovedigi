@@ -19,13 +19,12 @@ export default {
 		position absolute
 		background $bg
 		width 100%
-		top 6rem
+		top 16rem
 		bottom 0
 		left 0
 		z-index -1
 	section
 		section()
-		padding-top 0
 	ul
 		display grid
 		grid-template-columns repeat(6,1fr)

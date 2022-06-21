@@ -13,9 +13,10 @@ export default {
 
 <style lang="stylus">
 .caselist
-	padding-top 8rem
 	section
 		section()
+		h2
+			margin-bottom 4.2rem
 		> ul
 			display grid
 			grid-template-columns repeat(3,1fr)

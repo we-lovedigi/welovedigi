@@ -1,5 +1,11 @@
 <template lang="pug">
-	MeetTheTeamSection
+main
+	HelperPageHeader
+		h5 Lets introduce
+		h1 Meet the team
+	HelperBackground
+		MeetTheTeamList
+	MeetTheTeamList(joiners)
 </template>
 
 <script>

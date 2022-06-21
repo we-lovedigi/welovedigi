@@ -55,6 +55,6 @@ export default {
 		right 1rem
 		mix-blend-mode difference
 		svg
-			width 3.2rem
+			width 2.4rem
 			height @width
 </style>

@@ -3,7 +3,8 @@
 		.btn__arrow
 			include ./assets/arrow-right.svg
 			.circle
-		slot
+		span
+			slot
 </template>
 
 <script>
@@ -31,6 +32,12 @@ export default {
 	position relative
 	line-height 1.2
 	margin-top 2.4rem
+	z-index 1
+	transition transform 300ms ease
+	span
+		z-index 2
+		position relative
+		transition all 300ms ease
 	&__arrow
 		position absolute
 		top 0
@@ -58,9 +65,17 @@ export default {
 			transform translate(0,-50%)
 			transition all 300ms ease
 	&:hover
+		transform scale(1.07)
+		span
+			color $primary
 		.btn__arrow
 			svg
 				left 1.5rem
+				fill $primary
 			.circle
 				width 100%
+				background rgba($primary,.1)
+				my-shadow-hover($primary)
+				z-index -1
+				border-color $primary
 </style>

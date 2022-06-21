@@ -33,7 +33,39 @@
           "label": "Bodytext",
           "placeholder": "",
           "allowTargetBlank": true,
-          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "customer": {
+        "type": "Text",
+        "config": {
+          "label": "Customer",
+          "placeholder": "Gucci GmbH"
+        }
+      },
+      "industry": {
+        "type": "Text",
+        "config": {
+          "label": "Industry",
+          "placeholder": "Pharma // Medical"
+        }
+      },
+      "companySize": {
+        "type": "Text",
+        "config": {
+          "label": "Company Size",
+          "placeholder": "~ 25.000 Employees"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "connected_product": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     }

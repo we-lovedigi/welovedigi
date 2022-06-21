@@ -60,6 +60,14 @@ export default {
 		h1
 			color $white
 			regular()
+		.btn
+			&:hover
+				span
+					color $white
+				svg
+					fill $white !important
+				.circle
+					border-color $white !important
 	&__social
 		align-self end
 	&__aside

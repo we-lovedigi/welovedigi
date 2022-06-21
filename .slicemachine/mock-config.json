@@ -9,7 +9,14 @@
         "content": "John Doe"
       }
     },
-    "event": {},
+    "event": {
+      "bodytext": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
     "product": {
       "bodytext": {
         "config": {
@@ -18,7 +25,14 @@
         }
       }
     },
-    "casestudie": {},
+    "casestudie": {
+      "bodytext": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
     "general": {},
     "teammembers": {},
     "joiners": {}
@@ -37,6 +51,12 @@
         }
       }
     },
-    "ProductVideo": {}
+    "ProductVideo": {},
+    "ConnectedProduct": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
   }
 }

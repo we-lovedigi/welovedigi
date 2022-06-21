@@ -16,7 +16,7 @@ my-colors = {
 }
 for name, color in my-colors
 	define('$'+name color)
-
+$bg = lighten(#be3b82,95%)
 
 // 🤙 Grid
 $bp1=769px
@@ -108,3 +108,14 @@ transitionLoop(until = 10, milsec = 166ms)
 	for i in (1..until)
 		&:nth-child({i})
 			transition-delay (milsec * i)
+
+objectFitImage()
+	position relative
+	img, picture
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+		object-fit cover
+		object-position center

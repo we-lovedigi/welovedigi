@@ -1,6 +1,60 @@
 {
   "slices": {
     "components": {
+      "connected_product": {
+        "library": "slices",
+        "id": "connected_product",
+        "name": "ConnectedProduct",
+        "description": "ConnectedProduct",
+        "model": {
+          "id": "connected_product",
+          "type": "SharedSlice",
+          "name": "ConnectedProduct",
+          "description": "ConnectedProduct",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ConnectedProduct",
+              "primary": {
+                "connectedProduct": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Connected Product",
+                    "select": "document",
+                    "customtypes": [
+                      "product"
+                    ]
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "connected_product",
+            "items": [],
+            "primary": {
+              "connectedProduct": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "product_video": {
         "library": "slices",
         "id": "product_video",

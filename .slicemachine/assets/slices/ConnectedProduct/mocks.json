@@ -1,0 +1,14 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "connected_product",
+    "items": [],
+    "primary": {
+      "connectedProduct": {
+        "link_type": "Web",
+        "url": "http://google.com"
+      }
+    }
+  }
+]

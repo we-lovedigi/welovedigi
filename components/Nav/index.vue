@@ -66,6 +66,7 @@ export default {
 	top 0
 	left 0
 	width 100%
+	background $white
 	border-bottom 1px solid rgba($black,.1)
 	z-index 100
 	transition background 300ms ease
@@ -122,6 +123,7 @@ export default {
 		bold()
 		font-size 1.4rem
 	&.is-light
+		background transparent
 		border-bottom 1px solid rgba($white,.1)
 		a
 			color $white
@@ -132,7 +134,7 @@ export default {
 			&:hover
 				border 1px solid rgba($white,.3)
 	&.is-sticky
-		background rgba(white,.85)
+		background rgba($white,.85)
 		backdrop-filter blur(18px) saturate(160%)
 		transition background 300ms ease
 		background-clip padding-box

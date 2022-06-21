@@ -1,6 +1,6 @@
 {
-  "id": "imprint",
-  "label": "Imprint",
+  "id": "dataprivacy",
+  "label": "Data Privacy",
   "repeatable": false,
   "status": true,
   "json": {

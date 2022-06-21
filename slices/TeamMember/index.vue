@@ -1,5 +1,13 @@
 <template lang="pug">
-.teammember
+nuxt-link(v-if="slice.primary.hasCV" :to="'/meettheteam/' + slice.primary.name.replace(' ','').toLowerCase()").teammember
+	.teammember__text
+		h5 {{ slice.primary.jobTitle }}
+		h3 {{ slice.primary.name }}
+	.teammember__image
+		nuxt-img(:src="slice.primary.image.url" alt="image")
+		a(href="bla").teammember__icon
+			include ./assets/linkedin.svg
+.teammember(v-else)
 	.teammember__text
 		h5 {{ slice.primary.jobTitle }}
 		h3 {{ slice.primary.name }}

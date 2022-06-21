@@ -66,10 +66,7 @@ export const actions ={
 		)
 		commit('setContent', {events: events.results})
 
-		// TEAM MEMBERS
-		// const teammembers = await this.$prismic.api.query(
-		// 	this.$prismic.predicates.at('document.type','teammember')
-		// )
+		// Team members
 		const founders =  await this.$prismic.api.getSingle('founders')
 		commit('setContent', {founders})
 		const joiners =  await this.$prismic.api.getSingle('joiners')
@@ -82,5 +79,8 @@ export const actions ={
 		// Imprint
 		const imprint =  await this.$prismic.api.getSingle('imprint')
 		commit('setContent', {imprint})
+
+		const dataprivacy =  await this.$prismic.api.getSingle('dataprivacy')
+		commit('setContent', {dataprivacy})
     },
 }

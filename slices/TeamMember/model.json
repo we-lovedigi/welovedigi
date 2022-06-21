@@ -55,6 +55,24 @@
             "label": "Youtube Video ID",
             "placeholder": ""
           }
+        },
+        "hasCV": {
+          "type": "Boolean",
+          "config": {
+            "label": "Has CV",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "detailedCV": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Detailed CV",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
         }
       },
       "items": {},

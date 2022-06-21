@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","name":"Default","slice_type":"team_member","items":[],"primary":{"name":"expedite plug-and-play e-tailers","jobTitle":"morph collaborative technologies","linkedinUrl":"morph revolutionary blockchains","image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=900&h=500&fit=crop"},"hasVideo":false,"youtubeVideoID":"utilize integrated functionalities"},"id":"_Default"}
+      mock: {"variation":"default","name":"Default","slice_type":"team_member","items":[],"primary":{"name":"grow granular e-tailers","jobTitle":"incentivize robust markets","linkedinUrl":"orchestrate out-of-the-box e-commerce","image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=900&h=500&fit=crop"},"hasVideo":true,"youtubeVideoID":"facilitate strategic infomediaries","hasCV":true,"detailedCV":[{"type":"paragraph","text":"Tempor et anim ullamco occaecat cupidatat aliquip nulla tempor labore sit Lorem proident cupidatat mollit anim. Amet id nostrud tempor ut reprehenderit non magna anim adipisicing mollit reprehenderit nulla commodo.","spans":[]}]},"id":"_Default"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

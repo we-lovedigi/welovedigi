@@ -22,6 +22,9 @@ export default {
 
 <style lang="stylus">
 .productcard
+	display flex
+	flex-direction column
+	// align-content start
 	&__image
 		position relative
 		width 100%
@@ -51,4 +54,5 @@ export default {
 		display flex
 		align-items center
 		justify-content space-between
+		margin-top auto
 </style>

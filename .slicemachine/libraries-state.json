@@ -53,7 +53,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/sean/Sites/kailbert-github/welovedigi/slices/ConnectedProduct/default/preview.png",
+            "width": 720,
+            "height": 198
+          }
+        }
       },
       "product_video": {
         "library": "slices",
@@ -213,6 +219,24 @@
                     "label": "Youtube Video ID",
                     "placeholder": ""
                   }
+                },
+                "hasCV": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Has CV",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  }
+                },
+                "detailedCV": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Detailed CV",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
                 }
               },
               "items": {},
@@ -227,9 +251,9 @@
             "slice_type": "team_member",
             "items": [],
             "primary": {
-              "name": "expedite plug-and-play e-tailers",
-              "jobTitle": "morph collaborative technologies",
-              "linkedinUrl": "morph revolutionary blockchains",
+              "name": "grow granular e-tailers",
+              "jobTitle": "incentivize robust markets",
+              "linkedinUrl": "orchestrate out-of-the-box e-commerce",
               "image": {
                 "dimensions": {
                   "width": 900,
@@ -239,8 +263,16 @@
                 "copyright": null,
                 "url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=900&h=500&fit=crop"
               },
-              "hasVideo": false,
-              "youtubeVideoID": "utilize integrated functionalities"
+              "hasVideo": true,
+              "youtubeVideoID": "facilitate strategic infomediaries",
+              "hasCV": true,
+              "detailedCV": [
+                {
+                  "type": "paragraph",
+                  "text": "Tempor et anim ullamco occaecat cupidatat aliquip nulla tempor labore sit Lorem proident cupidatat mollit anim. Amet id nostrud tempor ut reprehenderit non magna anim adipisicing mollit reprehenderit nulla commodo.",
+                  "spans": []
+                }
+              ]
             }
           }
         },

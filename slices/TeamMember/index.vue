@@ -13,8 +13,10 @@ nuxt-link(v-if="slice.primary.hasCV" :to="'/meettheteam/' + slice.primary.name.r
 		h3 {{ slice.primary.name }}
 	.teammember__image
 		nuxt-img(:src="slice.primary.image.url" alt="image")
-		a(href="bla").teammember__icon
+		a(:href="slice.primary.linkedinUrl" target="_blank" rel="noopener").teammember__icon
 			include ./assets/linkedin.svg
+		.teammember__icon.icon-play(v-if="slice.primary.hasVideo" @click="showModal(slice.primary.youtubeVideoID)")
+			include ./assets/play.svg
 </template>
 
 <script>
@@ -24,6 +26,11 @@ export default {
   name: "TeamMember",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(["slice", "index", "slices", "context"]),
+  methods:{
+	showModal: function(id){
+		this.$store.commit('showEmbedModal', {visible: true, id: id})
+	}
+  }
 }
 </script>
 
@@ -62,7 +69,10 @@ export default {
 		top 1rem
 		right 1rem
 		mix-blend-mode difference
+		cursor pointer
 		svg
 			width 2.4rem
 			height @width
+	.icon-play
+		right 4rem
 </style>

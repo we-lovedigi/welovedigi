@@ -67,6 +67,8 @@ footer
 			display grid
 			grid-template-columns repeat(4,1fr)
 			gap 6rem
+			+mobile()
+				gtc(1fr)
 		&__logo
 			img
 				max-width 16rem

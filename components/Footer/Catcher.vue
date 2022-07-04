@@ -26,6 +26,8 @@ export default {
 		filter saturate(110%)
 		margin-bottom -8rem
 		z-index 2
+		+mobile()
+			clip-path polygon(0 0, 100% 0, 100% 92%, 92% 100%, 0% 100%)
 		&.blur
 			z-index -1
 			position absolute
@@ -45,8 +47,12 @@ export default {
 		color $white
 		regular()
 		font-size 4.2rem
+		+mobile()
+			font-size 3.2rem
 	p
 		color $white
+		+mobile()
+			font-size 1.2rem
 	&__button
 		background $white
 		padding 1.6rem 3.4rem

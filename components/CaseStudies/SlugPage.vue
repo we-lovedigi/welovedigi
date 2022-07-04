@@ -6,6 +6,9 @@
 				.casepage__text
 					h5 Case Study
 					h1 {{doc.data.title}}
+					article
+						prismic-rich-text(:field="doc.data.Introduction")
+						HelperButton(to="/scheduleacall") Requst a demo
 					prismic-rich-text(:field="doc.data.bodytext")
 					HelperButton(to="/scheduleacall") Requst a demo
 				.casepage__aside
@@ -13,6 +16,7 @@
 						nuxt-picture(:src="doc.data.image.url" alt="image")
 					div
 					.casepage__meta
+						h5 Case Study metadata:
 						.casepage__metaitem Customer:
 							span {{doc.data.customer}}
 						.casepage__metaitem Industry:
@@ -83,16 +87,28 @@ export default {
 		display grid
 		grid-template-columns 1fr 1fr
 		gap 6rem
+		+mobile()
+			gtc(1fr)
+			gap 2rem
 		h1
+			font-size 5.2rem
+			line-height 1
 			margin-bottom 4.2rem
+			+mobile()
+				font-size 3.2rem
+	&__text
+		article
+			margin-bottom 6.2rem
 	&__image
-		aspect-ratio 10/10
+		aspect-ratio 10/12
 		objectFitImage()
 		grid-column span 2
 	&__aside
 		display grid
 		grid-template-columns 1fr 2fr
 		align-content start
+		+mobile()
+			gtc(1fr)
 	&__meta
 		background $bg
 		padding 4rem 2rem
@@ -105,7 +121,7 @@ export default {
 		margin-top 1.6rem
 		min-width 26rem
 		&:first-child
-			border-top 1px solid $black
+			// border-top 1px solid $black
 			padding-top 2.4rem
 		span
 			font-size 1.4rem
@@ -121,6 +137,8 @@ export default {
 					grid-template-columns 12.2rem auto
 					gap 1rem
 					align-items stretch
+					+bp(1242px)
+						grid-template-columns 1fr
 				+ li
 					margin-top 1.6rem
 				.text

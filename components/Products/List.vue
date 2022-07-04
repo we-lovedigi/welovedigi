@@ -22,4 +22,7 @@ export default {
 		display grid
 		grid-template-columns repeat(4,1fr)
 		gap 4rem
+		+mobile()
+			gtc(1fr 1fr)
+			gap 2rem
 </style>

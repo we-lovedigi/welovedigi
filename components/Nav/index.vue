@@ -1,13 +1,14 @@
 <template lang="pug">
+.nav__wrapper(@mouseleave="closeSubNav()")
 	nav.nav(:class="{'is-sticky' : stickyBar, 'is-light' : light}")
 		section
-			nuxt-link(to="/").nav__logo
+			nuxt-link(to="/" @mouseenter.native="closeSubNav()").nav__logo
 				img(:src="logoWhite" v-if="light && !stickyBar")
 				img(:src="logoBlack" v-else)
 			ul.nav__menu
-				li(v-for="m in $store.state.metadata.navItems")
+				li(v-for="m in $store.state.metadata.navItems" @mouseover="setSubNavHover(m.name)")
 					nuxt-link(:to="m.link") {{m.name}}
-			.nav__cta
+			.nav__cta(@mouseenter="closeSubNav()")
 				nuxt-link(to="/scheduleacall") Schedule a call
 				.dot
 				.dot
@@ -15,6 +16,7 @@
 				.dot
 			.nav__burger
 				include ./assets/burger.svg
+	NavSubnav(:content="subNavContent" :class="{'is-visible' : subNavVisible , 'is-sticky' : stickyBar, 'is-light' : light}")
 </template>
 
 <script>
@@ -32,7 +34,9 @@ export default {
 			burgerOpen: false,
 			stickyBar: false,
 			logoWhite,
-			logoBlack
+			logoBlack,
+			subNavVisible: false,
+			subNavContent: 'Products'
 		}
 	},
 	methods:{
@@ -46,6 +50,18 @@ export default {
 				this.stickyBar = false
 			}
 		},
+		setSubNavHover: function(name){
+			if(name == 'Home' || name  == 'Meet the Team') {
+				this.closeSubNav()
+			}
+			else{
+				this.subNavVisible = true
+				this.subNavContent = name
+			}
+		},
+		closeSubNav: function(){
+			this.subNavVisible = false
+		}
 	},
 	created () {
 		if (process.browser) {
@@ -62,14 +78,16 @@ export default {
 
 <style lang="stylus">
 .nav
-	position fixed
-	top 0
-	left 0
-	width 100%
-	background $white
 	border-bottom 1px solid rgba($black,.1)
+	background $white
 	z-index 100
 	transition background 300ms ease
+	&__wrapper
+		width 100%
+		position fixed
+		top 0
+		left 0
+		z-index 100
 	section
 		max-width $pagewidth
 		margin 0 auto
@@ -118,21 +136,29 @@ export default {
 				bottom -.1rem
 		&:hover
 			border 1px solid rgba($black,.3)
+	.nav__burger
+		> svg
+			fill $black
 	a
 		color $black
 		bold()
 		font-size 1.4rem
+		&:hover
+			color $primary
 	&.is-light
 		background transparent
 		border-bottom 1px solid rgba($white,.1)
 		a
 			color $white
 		.nav__cta
-			border 1px solid rgba($white,.1)
+			border 1px solid rgba($white,.2)
 			.dot
 				background $white
 			&:hover
-				border 1px solid rgba($white,.3)
+				border 1px solid rgba($white,.4)
+		.nav__burger
+			> svg
+				fill $white
 	&.is-sticky
 		background rgba($white,.85)
 		backdrop-filter blur(18px) saturate(160%)
@@ -142,11 +168,14 @@ export default {
 		a
 			color $black
 		.nav__cta
-			border 1px solid rgba($black,.1)
+			border 1px solid rgba($black,.2)
 			.dot
 				background $black
 			&:hover
-				border 1px solid rgba($black,.3)
+				border 1px solid rgba($black,.4)
+		.nav__burger
+			> svg
+				fill $black
 	&__burger
 		display none
 		cursor pointer

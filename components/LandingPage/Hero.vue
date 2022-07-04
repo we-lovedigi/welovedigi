@@ -35,6 +35,8 @@ export default {
 	align-items center
 	padding 4rem
 	height 100%
+	+mobile()
+		grid-template-columns 1fr
 	&__bg
 		position absolute
 		top 0
@@ -70,9 +72,13 @@ export default {
 					border-color $white !important
 	&__social
 		align-self end
+		+mobile()
+			display none
 	&__aside
 		align-self end
 		justify-self end
+		+mobile()
+			display none
 		svg
 			width 6.2rem
 			height @width

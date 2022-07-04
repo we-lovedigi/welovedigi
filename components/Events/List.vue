@@ -30,6 +30,8 @@ export default {
 		grid-template-columns repeat(6,1fr)
 		gap 4rem
 		align-items stretch
+		+mobile()
+			gtc(1fr)
 		li
 			grid-column span 2
 			border-bottom 1px solid $black

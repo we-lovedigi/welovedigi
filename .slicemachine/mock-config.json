@@ -38,6 +38,12 @@
           "patternType": "PARAGRAPH",
           "blocks": 1
         }
+      },
+      "Introduction": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
       }
     },
     "general": {},

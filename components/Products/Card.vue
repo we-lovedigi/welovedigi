@@ -38,6 +38,9 @@ export default {
 			height 100%
 			object-fit cover
 			object-position center
+	&__title
+		+mobile()
+			font-size 1.4rem
 	&__subtitle
 		margin-top 1rem
 		border-top 1px solid $black
@@ -50,6 +53,8 @@ export default {
 		font-size 1.2rem
 		bold()
 		margin-top 2.4rem
+		+mobile()
+			display none
 	.btn-group
 		display flex
 		align-items center

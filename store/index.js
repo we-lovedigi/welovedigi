@@ -1,5 +1,9 @@
 export const state = () => ({
 	content: {},
+	embedModal:{
+		visible: false,
+		id: null
+	},
 	metadata: {
 		socialChannels: {
 			linkedIn: 'https://www.google.com',
@@ -42,7 +46,10 @@ export const state = () => ({
 export const mutations = {
     setContent( state, content){
         state.content = {...state.content, ...content}
-    }
+    },
+	showEmbedModal(state, object){
+		state.embedModal = object
+	}
 }
 
 export const actions ={

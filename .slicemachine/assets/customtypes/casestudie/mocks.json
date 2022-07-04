@@ -1,9 +1,9 @@
 {
-  "id": "c9186b9b-8343-43f0-b6d5-c5cd131a94c8",
-  "uid": "qui-cupiditate-nesciunt",
+  "id": "bb78e5f5-ea84-4c84-b664-c9479ec28d1c",
+  "uid": "et-et-aperiam",
   "type": "casestudie",
   "data": {
-    "title": "reintermediate global supply-chains",
+    "title": "evolve seamless action-items",
     "image": {
       "dimensions": {
         "width": 900,
@@ -11,17 +11,24 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51?w=900&h=500&fit=crop"
     },
-    "bodytext": [
+    "Introduction": [
       {
         "type": "paragraph",
-        "text": "Ut Lorem ad incididunt irure enim. Labore labore consectetur aliqua ut exercitation ad.",
+        "text": "Non sit duis occaecat veniam qui veniam. Consectetur labore labore exercitation dolore pariatur. Nulla nulla quis non veniam dolor minim velit magna in enim.",
         "spans": []
       }
     ],
-    "customer": "implement 24/7 methodologies",
-    "industry": "whiteboard granular paradigms",
-    "companySize": "enable seamless infomediaries"
+    "bodytext": [
+      {
+        "type": "paragraph",
+        "text": "Consequat exercitation aliquip qui excepteur. Officia nisi dolor ut dolore culpa eu culpa excepteur reprehenderit elit mollit culpa nostrud.",
+        "spans": []
+      }
+    ],
+    "customer": "enable value-added eyeballs",
+    "industry": "transform bleeding-edge mindshare",
+    "companySize": "transform ubiquitous partnerships"
   }
 }

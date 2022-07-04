@@ -3,6 +3,7 @@
 		Nav(light)
 		nuxt
 		LazyFooter
+		HelperEmbedModal
 		//- code
 		//- 	pre {{$store.state.content}}
 </template>

@@ -88,6 +88,7 @@ export default {
 		top 0
 		left 0
 		z-index 100
+		pointer-events none
 	section
 		max-width $pagewidth
 		margin 0 auto
@@ -97,6 +98,7 @@ export default {
 		justify-content space-between
 		gap 2rem
 		padding 2rem 4rem
+		pointer-events auto
 		+mobile()
 			grid-template-columns auto auto
 	&__logo

@@ -68,12 +68,12 @@ export default {
 	background-clip padding-box
 	border-bottom 2px solid rgba($black,.07)
 	transition all 600ms ease
-	z-index -1
 	position relative
+	z-index -1
 	opacity 0
-	transform translate3d(0,-4rem, 0)
-	pointer-events none
+	transform translate(0,-4rem)
 	my-shadow(darken($primary,70%))
+	pointer-events none
 	+mobile()
 		display none
 	section

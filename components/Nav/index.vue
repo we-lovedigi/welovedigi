@@ -113,6 +113,9 @@ export default {
 		display flex
 		align-items center
 		justify-content center
+		a
+			bold()
+			font-size 1.3rem
 		+mobile()
 			display none
 		li + li
@@ -123,6 +126,9 @@ export default {
 		padding 1.2rem 2rem
 		border 1px solid rgba($black,.1)
 		cursor pointer
+		a
+			bold()
+			font-size 1.3rem
 		+mobile()
 			display none
 		.dot
@@ -200,6 +206,9 @@ export default {
 		transform translate3d(0,-4rem, 0)
 		z-index -1
 		position relative
+		display none
+		+mobile()
+			display block
 		li
 			line-height 3
 			border-bottom 1px solid rgba($black,.1)

@@ -14,8 +14,14 @@
 				.dot
 				.dot
 				.dot
-			.nav__burger
+			.nav__burger(@click="toggleBurger()" v-if="!burgerOpen")
 				include ./assets/burger.svg
+			.nav__burger(@click="toggleBurger()" v-else).nav__burger-close
+				include ./assets/closeburger.svg
+	.nav__burgermenu(:class="{'is-visible' : burgerOpen, 'is-sticky' : stickyBar, 'is-light' : light}" )
+		ul
+			li(v-for="m in $store.state.metadata.navItems" @click="toggleBurger()")
+				nuxt-link(:to="m.link") {{m.name}}
 	NavSubnav(:content="subNavContent" :class="{'is-visible' : subNavVisible , 'is-sticky' : stickyBar, 'is-light' : light}")
 </template>
 
@@ -138,15 +144,18 @@ export default {
 				bottom -.1rem
 		&:hover
 			border 1px solid rgba($black,.3)
-	.nav__burger
+	&__burger
+		display none
 		> svg
 			fill $black
-	a
-		color $black
-		bold()
-		font-size 1.4rem
-		&:hover
-			color $primary
+			width 3.2rem
+			height @width
+		&-close
+			svg
+				width 2.4rem
+				height @width
+		+mobile()
+			display block
 	&.is-light
 		background transparent
 		border-bottom 1px solid rgba($white,.1)
@@ -178,13 +187,44 @@ export default {
 		.nav__burger
 			> svg
 				fill $black
-	&__burger
-		display none
-		cursor pointer
-		> svg
-			fill $white
-			width 3.2rem
-			height @width
-		+mobile()
-			display block
+	&__burgermenu
+		padding 2rem
+		background rgba($white,.85)
+		backdrop-filter blur(18px) saturate(160%)
+		transition background 300ms ease
+		background-clip padding-box
+		border-bottom 2px solid rgba($black,.07)
+		transition all 600ms ease
+		opacity 0
+		pointer-events none
+		transform translate3d(0,-4rem, 0)
+		z-index -1
+		position relative
+		li
+			line-height 3
+			border-bottom 1px solid rgba($black,.1)
+			&:last-child
+				border-bottom 0
+			a
+				bold()
+				color $black
+				font-size 1.4rem
+				padding 0 1.2rem
+				&:hover
+					color $primary
+		&.is-visible
+			opacity 1
+			transform translate3d(0,0,0)
+			pointer-events auto
+			transition all 300ms ease
+		&.is-light
+			background rgba($black,.5)
+			*
+				color $white
+				border-color rgba($white,.1)
+		&.is-sticky
+			background rgba($white,.85)
+			*
+				color $black
+				border-color rgba($black,.1)
 </style>

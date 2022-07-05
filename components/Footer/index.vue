@@ -127,6 +127,8 @@ footer
 					padding 1rem
 					svg
 						color $white
+						width 2.4rem
+						height @width
 					&:hover svg
 						color $secondary
 					& + li

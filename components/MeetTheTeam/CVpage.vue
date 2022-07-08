@@ -55,18 +55,7 @@ export default {
 		aspect-ratio 10/12
 		clip-path polygon(0 0, 100% 0, 100% 90%, 86% 100%, 0% 100%)
 		objectFitImage()
-		background $primary
-		img, picture
-			mix-blend-mode multiply
-		&::after
-			position absolute
-			content ''
-			inset 0
-			background #16006f
-			z-index 2
-			mix-blend-mode lighten
-			opacity .8
-			pointer-events none
+		filter saturate(10%) contrast(90%) sepia(20%) hue-rotate(220deg)
 	&__meta
 		display grid
 		gtc(1fr 1fr)

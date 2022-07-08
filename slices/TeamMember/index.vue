@@ -68,8 +68,7 @@ export default {
 		width 100%
 		aspect-ratio 10/12
 		clip-path polygon(0 0, 100% 0, 100% 90%, 86% 100%, 0% 100%)
-		// background #f7392b
-		background $primary
+		filter saturate(10%) contrast(90%) sepia(20%) hue-rotate(220deg)
 		img, picture
 			position absolute
 			top 0
@@ -78,18 +77,7 @@ export default {
 			height 100%
 			object-fit cover
 			object-position center
-			mix-blend-mode multiply
-		&::after
-			position absolute
-			content ''
-			inset 0
-			// background linear-gradient(to bottom right,$secondary 0%, $primary 30%)
-			background #16006f
-			// background darken($primary,10%)
-			z-index 2
-			mix-blend-mode lighten
-			opacity .8
-			pointer-events none
+
 	&__icon
 		position absolute
 		z-index 2

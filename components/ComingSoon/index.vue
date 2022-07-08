@@ -3,20 +3,31 @@
 	img(:src="imgBg" alt="image").comingsoon__bg
 	section
 		div
-			h5 The flexible event solution.
-			h1 Coming soon
-			p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
-			ComingSoonCountdown(end="August 22, 2022")
-			HelperButton(to="/scheduleacall") Get notified
+			h5 {{doc.subheadline}}
+			h1 {{doc.title}}
+			prismic-rich-text(:field="doc.bodytext")
+			ComingSoonCountdown(:deadline="date")
+			HelperButton(:to="doc.buttonLink") Get notified
 		div
 </template>
 
 <script>
 import imgBg from './assets/bg_countdown.jpg'
+import dayjs from 'dayjs'
+
 export default {
 	data(){
 		return{
-			imgBg
+			imgBg,
+			date: 'August 22, 2026'
+		}
+	},
+	beforeMount(){
+		this.date = dayjs(this.$store.state.content.comingsoon.data.endDate).format('MMMM D, YYYY')
+	},
+	computed:{
+		doc: function(){
+			return this.$store.state.content.comingsoon.data
 		}
 	}
 }
@@ -45,4 +56,7 @@ export default {
 		display grid
 		grid-template-columns 1.618fr 1fr
 		gap 2rem
+		p
+			b,strong
+				color $black
 </style>

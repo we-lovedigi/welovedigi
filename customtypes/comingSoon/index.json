@@ -1,0 +1,47 @@
+{
+  "id": "comingSoon",
+  "label": "Coming Soon Page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "subheadline": {
+        "type": "Text",
+        "config": {
+          "label": "Subheadline",
+          "placeholder": ""
+        }
+      },
+      "endDate": {
+        "type": "Date",
+        "config": {
+          "label": "End Date",
+          "placeholder": ""
+        }
+      },
+      "bodytext": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Bodytext",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "buttonLink": {
+        "type": "Text",
+        "config": {
+          "label": "Button Link",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

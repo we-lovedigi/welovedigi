@@ -92,5 +92,8 @@ export const actions ={
 
 		const dataprivacy =  await this.$prismic.api.getSingle('dataprivacy')
 		commit('setContent', {dataprivacy})
+
+		const comingsoon =  await this.$prismic.api.getSingle('comingSoon')
+		commit('setContent', {comingsoon})
     },
 }

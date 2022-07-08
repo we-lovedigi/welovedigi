@@ -57,7 +57,8 @@
         }
       }
     },
-    "herosection": {}
+    "herosection": {},
+    "comingSoon": {}
   },
   "slices": {
     "TeamMember": {

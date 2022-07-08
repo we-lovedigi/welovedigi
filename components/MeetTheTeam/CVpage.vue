@@ -11,10 +11,12 @@
 					nuxt-picture(:src="doc.primary.image.url" alt="image")
 				.detailedcv__meta
 					.detailedcv__metaitem
-						h5 {{doc.primary.name}}s social channels:
+						h5 Contact {{doc.primary.name}}:
 						ul
 							li
 								a(:href="doc.primary.linkedinUrl" target="_blank" rel="noopener") LinkedIn
+							li
+								nuxt-link(to="/scheduleacall") Schedule a call
 </template>
 
 <script>
@@ -67,4 +69,5 @@ export default {
 		a
 			bold()
 			color $black
+			line-height 2
 </style>

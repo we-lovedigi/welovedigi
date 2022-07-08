@@ -101,7 +101,7 @@ export default {
 		&:hover
 			color $secondary
 		svg
-			width 2.8rem
+			width 2.4rem
 			height @width
 	.icon-play
 		right 1rem

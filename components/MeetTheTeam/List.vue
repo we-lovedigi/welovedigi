@@ -42,7 +42,7 @@ export default {
 			gtc(1fr 1fr)
 			gap 2rem
 		&.founders
-			grid-template-columns 1fr 1fr
+			grid-template-columns 1fr 1fr 1fr
 			+mobile()
 				gtc(1fr)
 .meettheteam + .meettheteam

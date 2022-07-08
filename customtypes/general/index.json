@@ -81,6 +81,34 @@
           "label": "Catcher Body",
           "placeholder": "Take advantage of our best..."
         }
+      },
+      "caseStudiesSectionIntroduction": {
+        "type": "Text",
+        "config": {
+          "label": "Case Studies Section Introduction",
+          "placeholder": "Increase your employee..."
+        }
+      },
+      "productsNavigationFeaturedText": {
+        "type": "Text",
+        "config": {
+          "label": "Products Navigation Featured Text",
+          "placeholder": ""
+        }
+      },
+      "storiesNavigationFeaturedText": {
+        "type": "Text",
+        "config": {
+          "label": "Stories Navigation Featured Text",
+          "placeholder": ""
+        }
+      },
+      "eventsNavigationFeaturedText": {
+        "type": "Text",
+        "config": {
+          "label": "Events Navigation Featured Text",
+          "placeholder": ""
+        }
       }
     }
   }

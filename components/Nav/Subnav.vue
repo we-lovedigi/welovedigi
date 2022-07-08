@@ -7,11 +7,11 @@
 					nuxt-link(to="/products") All of our products
 				div
 					h5 Featured content:
-					p There is an upcoming event related to Content Management Systems, go check it out.
+					p {{$store.state.content.metadata.data.productsNavigationFeaturedText}}
 			.subnav__list
 				h5 Our products
 				.subnav__list__products
-					ProductsThumb(v-for="p in products" :product="p" :key="p.uid")
+					ProductsThumb(v-for="p in products.slice(0,4)" :product="p" :key="p.uid")
 		section(v-if="content == 'Case Studies & Stories'")
 			.subnav__intro
 				div
@@ -19,11 +19,11 @@
 					nuxt-link(to="/casestudies") All of our Case Studies & Stories
 				div
 					h5 Featured content:
-					p Featured content text here of page studies.
+					p {{$store.state.content.metadata.data.storiesNavigationFeaturedText}}
 			.subnav__list
 				h5 Our Case Studies
 				.subnav__list__products
-					CaseStudiesThumb(v-for="c in casestudies" :doc="c" :key="c.uid")
+					CaseStudiesThumb(v-for="c in casestudies.slice(0,4)" :doc="c" :key="c.uid")
 		section(v-if="content == 'Events'")
 			.subnav__intro
 				div
@@ -31,7 +31,7 @@
 					nuxt-link(to="/events") All of our events
 				div
 					h5 Featured content:
-					p There is an upcoming event related to Content Management Systems, go check it out.
+					p {{$store.state.content.metadata.data.eventsNavigationFeaturedText}}
 			.subnav__list
 				h5 Newest events
 				.subnav__list__products

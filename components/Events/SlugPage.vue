@@ -47,15 +47,23 @@ export default {
 		right 0
 		width 33.3%
 		z-index -1
+		+mobile()
+			display none
 	section
 		section()
 	&__intro
 		display grid
 		grid-template-columns 1fr 1fr
 		gap 6rem
+		+mobile()
+			grid-template-columns 1fr
+			gap 2rem
 	&__meta
 		justify-self end
 		border-top 1px solid $black
+		+mobile()
+			justify-self stretch
+			border-top none
 	&__metaitem
 		color $text-light
 		font-size 1rem
@@ -71,6 +79,8 @@ export default {
 		grid-template-columns 1fr 1fr
 		gap 6rem
 		padding-top 4.2rem
+		+mobile()
+			grid-template-columns 1fr
 	&__bodyimage
 		aspect-ratio 10/11
 		objectFitImage()

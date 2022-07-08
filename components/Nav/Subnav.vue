@@ -87,6 +87,7 @@ export default {
 		gap 4rem
 		h5
 			margin-bottom .6rem
+			font-size 1rem
 	&__intro
 		display flex
 		flex-direction column

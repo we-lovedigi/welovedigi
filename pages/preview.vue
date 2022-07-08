@@ -1,11 +1,17 @@
-<template>
-  <p>Loading Prismic preview...</p>
+<template lang="pug">
+.preview
+	p loading preview...
 </template>
 
 <script>
 export default {
-  mounted() {
-    this.$prismic.preview()
-  }
+	mounted() {
+		this.$prismic.preview()
+	}
 }
 </script>
+
+<style lang="stylus">
+.preview
+	min-height 100vh
+</style>

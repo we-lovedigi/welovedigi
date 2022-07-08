@@ -32,7 +32,7 @@ export default {
 
   prismic: {
     endpoint: 'https://welovedigi.cdn.prismic.io/api/v2',
-    modern: true
+    modern: process.env.NODE_ENV === 'production'
     /* see configuration for more */
   },
 

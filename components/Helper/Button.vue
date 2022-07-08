@@ -1,5 +1,11 @@
 <template lang="pug">
-	nuxt-link(:to="to").btn
+	a(:href="to" target="_blank" rel="noopener" v-if="islink").btn
+		.btn__arrow
+			include ./assets/arrow-right.svg
+			.circle
+		span
+			slot
+	nuxt-link(:to="to" v-else).btn
 		.btn__arrow
 			include ./assets/arrow-right.svg
 			.circle
@@ -13,6 +19,10 @@ export default {
 		to:{
 			type: String,
 			default: '/'
+		},
+		islink:{
+			type: Boolean,
+			default: false
 		}
 	}
 }

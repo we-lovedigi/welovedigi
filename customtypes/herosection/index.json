@@ -1,0 +1,31 @@
+{
+  "id": "herosection",
+  "label": "Hero Section",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "headline": {
+        "type": "Text",
+        "config": {
+          "label": "Headline",
+          "placeholder": "Create outstanding event landing "
+        }
+      },
+      "subtitle": {
+        "type": "Text",
+        "config": {
+          "label": "Subtitle",
+          "placeholder": "The flexible event solution"
+        }
+      },
+      "buttonLink": {
+        "type": "Text",
+        "config": {
+          "label": "Button Link",
+          "placeholder": "/products/the-congress..."
+        }
+      }
+    }
+  }
+}

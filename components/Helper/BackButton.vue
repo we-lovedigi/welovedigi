@@ -31,4 +31,6 @@ export default {
 		height @width
 		fill currentColor
 		transform rotate(1/2 turn)
+	&:hover
+		color $primary
 </style>

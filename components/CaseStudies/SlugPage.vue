@@ -1,7 +1,7 @@
 <template lang="pug">
 	.casepage
 		section
-			HelperBackButton(to="/casestudies") see all Case Studies
+			HelperBackButton(to="/casestudies") see all stories
 			.casepage__body
 				.casepage__text
 					h5 Case Study
@@ -9,8 +9,12 @@
 					article
 						prismic-rich-text(:field="doc.data.Introduction")
 						HelperButton(to="/scheduleacall") Requst a demo
+					article
+						slice-zone(:components="components" :slices="doc.data.slices.filter(x => x.slice_type == 'case_study_stats')")
 					prismic-rich-text(:field="doc.data.bodytext")
 					HelperButton(to="/scheduleacall") Requst a demo
+					.backbtn
+						HelperBackButton(to="/casestudies") see all stories
 				.casepage__aside
 					.casepage__image
 						nuxt-picture(:src="doc.data.image.url" alt="image")
@@ -42,9 +46,6 @@
 								li
 									a(href="" target="blank" rel="noopener")
 										include ./assets/instagram.svg
-								li
-									a(href="" target="blank" rel="noopener")
-										include ./assets/twitter.svg
 
 </template>
 
@@ -69,7 +70,8 @@ export default {
 	},
 	methods:{
 		getConnectedProducts: function(){
-			let uids = this.doc.data.slices.map(x => x.primary.connectedProduct.uid)
+			let filteredSlices = this.doc.data.slices.filter(x => x.slice_type == 'connected_product')
+			let uids = filteredSlices.map(x => x.primary.connectedProduct.uid)
 			let products = this.$store.state.content.products.filter(x => uids.includes(x.uid) )
 			this.connectedProducts = products
 		}
@@ -91,14 +93,36 @@ export default {
 			gtc(1fr)
 			gap 2rem
 		h1
-			font-size 5.2rem
-			line-height 1
+			font-size 3.6rem
+			line-height 1.2
 			margin-bottom 4.2rem
 			+mobile()
 				font-size 3.2rem
 	&__text
+		p
+			color $black
+			font-size 2rem
+		ul
+			margin 2.4rem 0
+			li
+				padding-left 2.4rem
+				position relative
+				font-size 2rem
+				line-height 1.6
+				+ li
+					margin-top 1.2rem
+				&::after
+					content '\2022'
+					position absolute
+					font-size 2rem
+					left 0rem
+					top -.1rem
+					color $primary
+
 		article
 			margin-bottom 6.2rem
+		.backbtn
+			margin-top 6.2rem
 	&__image
 		aspect-ratio 10/12
 		objectFitImage()

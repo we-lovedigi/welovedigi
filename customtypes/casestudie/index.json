@@ -73,6 +73,9 @@
           "choices": {
             "connected_product": {
               "type": "SharedSlice"
+            },
+            "case_study_stats": {
+              "type": "SharedSlice"
             }
           }
         }

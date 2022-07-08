@@ -42,9 +42,6 @@
 						li
 							a(:href="$store.state.metadata.socialChannels.instagram")
 								include ./assets/instagram.svg
-						li
-							a(:href="$store.state.metadata.socialChannels.twitter")
-								include ./assets/twitter.svg
 </template>
 
 <script>

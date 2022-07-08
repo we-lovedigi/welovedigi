@@ -7,8 +7,6 @@
 					a(:href="$store.state.metadata.socialChannels.linkedIn" rel="noopener" target="blank") LinkedIn
 				li
 					a(:href="$store.state.metadata.socialChannels.instagram" rel="noopener" target="blank") Instagram
-				li
-					a(:href="$store.state.metadata.socialChannels.twitter" rel="noopener" target="blank") Twitter
 		.email
 			p Questions?
 			a(href="mailto:" rel="noopener" target="blank") write us an email.

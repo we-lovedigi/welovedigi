@@ -1,6 +1,86 @@
 {
   "slices": {
     "components": {
+      "case_study_stats": {
+        "library": "slices",
+        "id": "case_study_stats",
+        "name": "CaseStudyStats",
+        "description": "CaseStudyStats",
+        "model": {
+          "id": "case_study_stats",
+          "type": "SharedSlice",
+          "name": "CaseStudyStats",
+          "description": "CaseStudyStats",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "CaseStudyStats",
+              "primary": {},
+              "items": {
+                "number": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Number",
+                    "placeholder": "92%"
+                  }
+                },
+                "description": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "Lorem ipsum dolor sit amet"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "case_study_stats",
+            "items": [
+              {
+                "number": "implement 24/365 methodologies",
+                "description": "envisioneer global ROI"
+              },
+              {
+                "number": "exploit cross-platform interfaces",
+                "description": "aggregate out-of-the-box web services"
+              },
+              {
+                "number": "enhance viral e-services",
+                "description": "synergize visionary paradigms"
+              },
+              {
+                "number": "facilitate efficient e-services",
+                "description": "incubate intuitive e-services"
+              },
+              {
+                "number": "incentivize cross-media paradigms",
+                "description": "productize ubiquitous infrastructures"
+              }
+            ],
+            "primary": {}
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/sean/Sites/kailbert-github/welovedigi/.slicemachine/assets/slices/CaseStudyStats/default/preview.png",
+            "width": 800,
+            "height": 128
+          }
+        }
+      },
       "connected_product": {
         "library": "slices",
         "id": "connected_product",

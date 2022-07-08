@@ -79,9 +79,12 @@ export const actions ={
 		const joiners =  await this.$prismic.api.getSingle('joiners')
 		commit('setContent', {joiners})
 
-		// Imprint
+		// General
 		const metadata =  await this.$prismic.api.getSingle('general')
 		commit('setContent', {metadata})
+		// General
+		const herosection =  await this.$prismic.api.getSingle('herosection')
+		commit('setContent', {herosection})
 
 		// Imprint
 		const imprint =  await this.$prismic.api.getSingle('imprint')

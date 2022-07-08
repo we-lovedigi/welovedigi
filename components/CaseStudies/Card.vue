@@ -1,6 +1,6 @@
 <template lang="pug">
 	.casecard
-		nuxt-link(:to="'/casestudies/' +doc.uid").casecard__image
+		nuxt-link(:to="'/casestudies/' +doc.uid").casecard__image.cursor
 			nuxt-picture(:src="doc.data.image.url" alt="image")
 		.casecard__text
 			h5 Case Study
@@ -42,6 +42,25 @@ export default {
 		clip-path polygon(0 0, 100% 0, 100% 90%, 94% 100%, 0% 100%)
 		margin-bottom 1.2rem
 	&__text
+		h5
+			font-size .9rem
 		h3
 			margin-top .6rem
+			font-size 2rem
+			line-height 1.4
+		p
+			font-size 1.4rem
+		.btn
+			color $primary
+			.circle
+				border-color $primary
+				opacity 0
+			&:hover
+				.circle
+					opacity 1
+			svg
+				color $primary
+	.cursor
+		&:hover
+			cursor url('assets/cursor.svg'), auto;
 </style>

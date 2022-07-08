@@ -6,9 +6,9 @@
 		.hero__social
 			LandingPageHeroSocial
 		.hero__headline
-			p The flexible event solution.
-			h1 Create outstanding event landing pages with ease.
-			HelperButton Discover more
+			p {{content.subtitle}}
+			h1 {{content.headline}}
+			HelperButton(:to="content.buttonLink") Discover more
 		.hero__aside
 			include ./assets/scroll.svg
 </template>
@@ -20,6 +20,11 @@ export default {
 	data(){
 		return{
 			HeroVid
+		}
+	},
+	computed:{
+		content: function(){
+			return this.$store.state.content.herosection.data
 		}
 	}
 }

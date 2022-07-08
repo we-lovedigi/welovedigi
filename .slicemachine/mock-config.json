@@ -56,7 +56,8 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "herosection": {}
   },
   "slices": {
     "TeamMember": {
@@ -80,6 +81,12 @@
     },
     "ProductVideo": {},
     "ConnectedProduct": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "CaseStudyStats": {
       "default": {
         "primary": {},
         "items": {}

@@ -41,9 +41,20 @@ export default {
 		grid-template-columns 1fr 1fr
 		gap 12rem
 		margin-bottom 12rem
-		align-items center
+		align-items start
+		+mobile()
+			grid-template-columns 1fr
+			margin-bottom 6rem
+			gap 4rem
 		h1
-			margin-bottom 8.2rem
+			font-size 3.6rem
+			line-height 1.2
+			margin-bottom 4.2rem
+			+mobile()
+				font-size 3.2rem
 		.btn
 			color $primary
+	&__image
+		aspect-ratio 10/12
+		objectFitImage()
 </style>

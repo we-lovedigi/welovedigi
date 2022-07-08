@@ -13,11 +13,11 @@
 					span {{doc.data.time}}
 				.eventpage__metaitem Location:
 					span {{doc.data.location}}
-				HelperButton(to="/scheduleacall") Register now
+				HelperButton(islink :to="doc.data.registerLink") Register now
 		.eventpage__body
 			.eventpage__bodytext
 				prismic-rich-text(:field="doc.data.bodytext")
-				HelperButton(to="/scheduleacall") Register now
+				HelperButton(islink :to="doc.data.registerLink") Register now
 			.eventpage__bodyimage
 				nuxt-picture(:src="doc.data.image.url" alt="image")
 </template>

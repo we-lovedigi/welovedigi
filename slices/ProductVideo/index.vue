@@ -31,6 +31,8 @@ export default {
 		grid-template-columns 2fr 1fr
 		gap 2rem
 		align-items center
+		+mobile()
+			grid-template-columns 1fr
 		iframe
 			aspect-ratio 16/9
 			width 100%

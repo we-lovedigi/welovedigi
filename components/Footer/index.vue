@@ -5,7 +5,7 @@
 			section
 				.footer__logo
 					HelperLogo
-					p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+					p {{$store.state.content.metadata.data.footerText}}
 				.footer__menu
 					p Explore
 					ul
@@ -22,17 +22,17 @@
 					.footer__addressitem
 						include ./assets/map-pin.svg
 						address
-							span {{$store.state.metadata.address.street}}
-							span {{$store.state.metadata.address.city}}
-							span {{$store.state.metadata.address.country}}
+							span {{$store.state.content.metadata.data.addressStreet}}
+							span {{$store.state.content.metadata.data.addressCity}}
+							span {{$store.state.content.metadata.data.addressCountry}}
 					p Email
 					.footer__addressitem
 						include ./assets/at-sign.svg
-						a(:href="'mailto:' + $store.state.metadata.address.email") {{$store.state.metadata.address.email}}
+						a(:href="'mailto:' + $store.state.content.metadata.data.addressEmail") {{$store.state.content.metadata.data.addressEmail}}
 					p Phone
 					.footer__addressitem
 						include ./assets/phone.svg
-						a(:href="$store.state.metadata.address.phone") {{$store.state.metadata.address.phoneNice}}
+						a(:href="$store.state.content.metadata.data.addressPhone") {{$store.state.content.metadata.data.addressPhone}}
 				.footer__social
 					p Social
 					ul

@@ -67,6 +67,20 @@
           "label": "Footer Text",
           "placeholder": "The next below the logo"
         }
+      },
+      "catcherHeadline": {
+        "type": "Text",
+        "config": {
+          "label": "Catcher Headline",
+          "placeholder": "There is no need to reinvent..."
+        }
+      },
+      "catcherBody": {
+        "type": "Text",
+        "config": {
+          "label": "Catcher Body",
+          "placeholder": "Take advantage of our best..."
+        }
       }
     }
   }

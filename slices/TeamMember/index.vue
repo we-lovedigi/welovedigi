@@ -94,4 +94,5 @@ export default {
 	.icon-play
 		right 1rem
 		color $white
+		mix-blend-mode difference
 </style>

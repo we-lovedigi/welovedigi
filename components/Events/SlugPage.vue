@@ -58,6 +58,12 @@ export default {
 		+mobile()
 			grid-template-columns 1fr
 			gap 2rem
+		h1
+			font-size 3.6rem
+			line-height 1.2
+			margin-bottom 4.2rem
+			+mobile()
+				font-size 3.2rem
 	&__meta
 		justify-self end
 		border-top 1px solid $black

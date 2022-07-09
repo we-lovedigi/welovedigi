@@ -52,6 +52,7 @@ export default {
 			font-size 1.4rem
 		.btn
 			color $primary
+			margin-left -1.8rem
 			.circle
 				border-color $primary
 				opacity 0

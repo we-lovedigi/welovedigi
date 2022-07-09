@@ -31,6 +31,10 @@ export const state = () => ({
 				name: 'Events',
 				link: '/events'
 			},
+			{
+				name: 'Coming Soon',
+				link: '/comingsoon'
+			},
 		],
 		address: {
 			street: 'Im Blumenkübel 12',

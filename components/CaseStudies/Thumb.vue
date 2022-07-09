@@ -37,4 +37,6 @@ export default {
 			margin-top .6rem
 			font-size 1.2rem
 			line-height 1.2
+			margin-bottom 0
+			padding-bottom 0
 </style>

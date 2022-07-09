@@ -57,7 +57,7 @@ export default {
 			}
 		},
 		setSubNavHover: function(name){
-			if(name == 'Home' || name  == 'Meet the Team') {
+			if(name == 'Home' || name  == 'Meet the Team' || name == 'Coming Soon') {
 				this.closeSubNav()
 			}
 			else{
@@ -105,7 +105,7 @@ export default {
 		gap 2rem
 		padding 2rem 4rem
 		pointer-events auto
-		+mobile()
+		+bp(1124px)
 			grid-template-columns auto auto
 	&__logo
 		max-width 18rem
@@ -116,7 +116,7 @@ export default {
 		a
 			bold()
 			font-size 1.3rem
-		+mobile()
+		+bp(1124px)
 			display none
 		li + li
 			margin-left 4.2rem
@@ -129,7 +129,7 @@ export default {
 		a
 			bold()
 			font-size 1.3rem
-		+mobile()
+		+bp(1124px)
 			display none
 		.dot
 			position absolute
@@ -160,7 +160,7 @@ export default {
 			svg
 				width 2.4rem
 				height @width
-		+mobile()
+		+bp(1124px)
 			display block
 	&.is-light
 		background transparent
@@ -207,7 +207,7 @@ export default {
 		z-index -1
 		position relative
 		display none
-		+mobile()
+		+bp(1124px)
 			display block
 		li
 			line-height 3

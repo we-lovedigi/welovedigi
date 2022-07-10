@@ -2,8 +2,7 @@
 	.caselist
 		section
 			ul
-				li(v-for="doc in $store.state.content.casestudies")
-					CaseStudiesCard(:doc="doc")
+				CaseStudiesCard(v-for="doc,i in $store.state.content.casestudies" :doc="doc" :key="i")
 </template>
 
 <script>
@@ -24,4 +23,7 @@ export default {
 			+mobile()
 				gtc(1fr)
 				gap 2rem
+			li
+				display flex
+				flex-direction column
 </style>

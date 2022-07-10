@@ -25,4 +25,9 @@ export default {
 		margin 0 auto
 		p
 			font-size 1.2rem
+		h1
+			font-size 4.2rem
+			line-height 1
+			+mobile()
+				font-size 2.6rem
 </style>

@@ -68,6 +68,10 @@ export default {
 		li
 			grid-column span 2
 			border-bottom 1px solid $black
+			height 100%
+			position relative
+			display flex
+			flex-direction column
 			&:nth-child(1), &:nth-child(2)
 				grid-column span 3
 	&__tabs

@@ -4,12 +4,12 @@
 			p Our social channels:
 			ul
 				li
-					a(:href="$store.state.metadata.socialChannels.linkedIn" rel="noopener" target="blank") LinkedIn
+					a(:href="$store.state.content.metadata.data.linkedinUrl" rel="noopener" target="blank") LinkedIn
 				li
-					a(:href="$store.state.metadata.socialChannels.instagram" rel="noopener" target="blank") Instagram
+					a(:href="$store.state.content.metadata.data.instagramUrl" rel="noopener" target="blank") Instagram
 		.email
 			p Questions?
-			a(href="mailto:" rel="noopener" target="blank") write us an email.
+			a(href="mailto:hello@we-lovedigi.com?subject=Hello WeLoveDigi 👋" rel="noopener" target="blank") write us an email.
 </template>
 
 <script>

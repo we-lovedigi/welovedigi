@@ -7,7 +7,7 @@
 			h1 {{doc.title}}
 			prismic-rich-text(:field="doc.bodytext")
 			ComingSoonCountdown(:deadline="date")
-			HelperButton(:to="doc.buttonLink") Get notified
+			HelperButton(:to="doc.buttonLink") Schedule a call
 		div
 </template>
 

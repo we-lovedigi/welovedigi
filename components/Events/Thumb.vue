@@ -5,12 +5,13 @@ nuxt-link(:to="'/events/' + doc.uid").eventsthumb
 	.eventsthumb__text
 		h5 {{ niceDate(doc.data.date) }}
 		h3 {{doc.data.title}}
-		.eventsthumb__date
-			include ./assets/clock.svg
-			span {{doc.data.time}}
-		.eventsthumb__date
-			include ./assets/map-pin.svg
-			span {{doc.data.location}}
+		.bottom
+			.eventsthumb__date
+				include ./assets/clock.svg
+				span {{doc.data.time}}
+			.eventsthumb__date
+				include ./assets/map-pin.svg
+				span {{doc.data.location}}
 </template>
 
 <script>
@@ -35,11 +36,16 @@ export default {
 .eventsthumb
 	display block
 	color $black
+	display flex
+	flex-direction column
 	&__image
 		aspect-ratio 16/6
 		objectFitImage()
 	&__text
 		padding 2rem 2rem 0 2rem
+		flex-grow 1
+		display flex
+		flex-direction column
 		h3
 			margin .6rem 0 2.4rem 0
 			font-size 1.2rem
@@ -50,4 +56,6 @@ export default {
 		align-items center
 		span
 			font-size 1.2rem
+	.bottom
+		margin-top auto
 </style>

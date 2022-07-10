@@ -1,8 +1,9 @@
 <template lang="pug">
 .detailedcv
-	HelperBackground(offset="28rem")
+	HelperBackground(offset="34rem")
 		section
 			.detailedcv__text
+				HelperBackButton(to="/meettheteam") back to meet the team
 				h5 {{doc.primary.jobTitle}}
 				h1 {{doc.primary.name}}
 				prismic-rich-text(:field="doc.primary.detailedCV")

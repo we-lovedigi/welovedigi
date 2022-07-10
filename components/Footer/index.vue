@@ -13,10 +13,10 @@
 							nuxt-link(:to="item.link") {{item.name}}
 						li
 							nuxt-link(to="/scheduleacall") Schedule a call
+						//- li
+						//- 	nuxt-link(to="/imprint") Imprint
 						li
-							nuxt-link(to="/imprint") Imprint
-						li
-							nuxt-link(to="/dataprivacy") Data Privacy
+							nuxt-link(to="/dataprivacy") Terms of use and conditions
 				.footer__address
 					p Address
 					.footer__addressitem
@@ -37,10 +37,10 @@
 					p Social
 					ul
 						li
-							a(:href="$store.state.metadata.socialChannels.linkedIn")
+							a(:href="$store.state.content.metadata.data.linkedinUrl" target="_blank" rel="noopener")
 								include ./assets/linkedin.svg
 						li
-							a(:href="$store.state.metadata.socialChannels.instagram")
+							a(:href="$store.state.content.metadata.data.instagramUrl" target="_blank" rel="noopener")
 								include ./assets/instagram.svg
 </template>
 

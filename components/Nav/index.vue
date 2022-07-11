@@ -3,8 +3,8 @@
 	nav.nav(:class="{'is-sticky' : stickyBar, 'is-light' : light}")
 		section
 			nuxt-link(to="/" @mouseenter.native="closeSubNav()").nav__logo
-				img(:src="logoWhite" v-if="light && !stickyBar")
-				img(:src="logoBlack" v-else)
+				img(:src="logoWhite" v-if="light && !stickyBar" alt="logo")
+				img(:src="logoBlack" v-else alt="logo")
 			ul.nav__menu
 				li(v-for="m in $store.state.metadata.navItems" @mouseover="setSubNavHover(m.name)")
 					nuxt-link(:to="m.link") {{m.name}}

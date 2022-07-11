@@ -9,14 +9,15 @@
 	//- 		nuxt-img(:src="slice.primary.image.url" alt="image")
 	.teammember
 		.teammember__text
-			h5 {{ slice.primary.jobTitle }}
+			.h5 {{ slice.primary.jobTitle }}
 			nuxt-link(v-if="slice.primary.hasCV" :to="'/meettheteam/' + slice.primary.name.replace(' ','').toLowerCase()")
 				h3 {{ slice.primary.name }}
 				span
 					include ./assets/arrow-right.svg
 			h3(v-else) {{slice.primary.name}}
-			a(:href="slice.primary.linkedinUrl" target="_blank" rel="noopener").teammember__icon
-				include ./assets/linkedin.svg
+			.teammember__icon
+				a(:href="slice.primary.linkedinUrl" target="_blank" rel="noopener")
+					include ./assets/linkedin.svg
 		.teammember__image
 			nuxt-img(:src="slice.primary.image.url" alt="image")
 			.teammember__icon.icon-play(v-if="slice.primary.hasVideo" @click="showModal(slice.primary.youtubeVideoID)")
@@ -46,15 +47,16 @@ export default {
 	position relative
 	&__text
 		position relative
-		h5
+		.h5
 			border-top 1px solid $black
 			padding-top 1.6rem
 			padding-bottom 0rem
 			font-size 1rem
 		h3
-			word-break break-word
+			// word-break break-word
 			margin-top .6rem
 			font-size 1.6rem
+			max-width 8rem
 		span
 			display block
 			margin-top 2.4rem

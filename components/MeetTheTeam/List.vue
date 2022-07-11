@@ -39,7 +39,7 @@ export default {
 		grid-template-columns repeat(3,1fr)
 		gap 6rem
 		+mobile()
-			gtc(1fr 1fr)
+			gtc(1fr)
 			gap 2rem
 		&.founders
 			grid-template-columns 1fr 1fr 1fr

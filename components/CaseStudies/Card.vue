@@ -2,7 +2,7 @@
 	li.casecard
 		nuxt-link(:to="'/casestudies/' +doc.uid").casecard__image.cursor
 			nuxt-picture(:src="doc.data.image.url" alt="image")
-		h5 Case Study
+		.h5 Case Study
 		h3 {{doc.data.title}}
 		//- p {{doc.data.bodytext[0].text | truncate(110)}}
 		HelperButton(:to="'/casestudies/' +doc.uid") Read more
@@ -42,7 +42,7 @@ export default {
 		clip-path polygon(0 0, 100% 0, 100% 90%, 94% 100%, 0% 100%)
 		margin-bottom 1.2rem
 
-	h5
+	.h5
 		font-size .9rem
 	h3
 		margin-top .6rem

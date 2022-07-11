@@ -22,12 +22,12 @@ export default {
 					{
 					hid: 'og:title',
 					property: 'og:title',
-					content: 'Circle Communications'
+					content: 'WeLoveDigi'
 				},
 				{
 					hid: 'og:description',
 					property: 'og:description',
-					content: "Connecting healthcare professionals and patients through empowered conversation."
+					content: "The flexible event solution."
 				}
 			]
 		}

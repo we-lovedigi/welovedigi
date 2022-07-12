@@ -5,7 +5,7 @@ main
 		h1 Meet the team
 	HelperBackground
 		MeetTheTeamList
-	MeetTheTeamList(joiners)
+	MeetTheTeamList(joiners v-if="$store.state.content.joiners")
 </template>
 
 <script>

@@ -15,10 +15,10 @@ main
 		.h5 Meet the team
 		h2 Our Founders
 	LazyMeetTheTeamList
-	LazyHelperSectionTitle(center)
+	LazyHelperSectionTitle(center v-if="$store.state.content.joiners")
 		.h5 Welcome
 		h2 Our new recruits
-	LazyMeetTheTeamList(joiners)
+	LazyMeetTheTeamList(joiners v-if="$store.state.content.joiners")
 </template>
 
 <script>

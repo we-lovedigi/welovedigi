@@ -91,8 +91,8 @@ export const actions ={
 		commit('setContent', {herosection})
 
 		// Imprint
-		const imprint =  await this.$prismic.api.getSingle('imprint')
-		commit('setContent', {imprint})
+		// const imprint =  await this.$prismic.api.getSingle('imprint')
+		// commit('setContent', {imprint})
 
 		const dataprivacy =  await this.$prismic.api.getSingle('dataprivacy')
 		commit('setContent', {dataprivacy})

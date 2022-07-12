@@ -6,8 +6,12 @@ div
 <script>
 export default {
 	asyncData({params, error, store }){
-
-		let allCVs = store.state.content.founders.data.slices.concat(store.state.content.joiners.data.slices)
+		let allCVs
+		if(store.state.content.joiners){
+			allCVs = store.state.content.founders.data.slices.concat(store.state.content.joiners.data.slices)
+		} else {
+			allCVs = store.state.content.founders.data.slices
+		}
 		let correctCV = allCVs.filter(x => x.primary.name.replace(' ', '').toLowerCase() == params.uid)
 		if(correctCV.length && correctCV[0].primary.hasCV != false) {
 			return {correctCV}

@@ -1,0 +1,22 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "testimonial",
+    "items": [],
+    "primary": {
+      "quote": "brand world-class paradigms",
+      "name": "recontextualize 24/365 e-commerce",
+      "jobtitle": "innovate intuitive supply-chains",
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c?w=900&h=500&fit=crop"
+      }
+    }
+  }
+]

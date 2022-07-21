@@ -4,12 +4,14 @@ import CaseStudyStats from './CaseStudyStats';
 import ConnectedProduct from './ConnectedProduct';
 import ProductVideo from './ProductVideo';
 import TeamMember from './TeamMember';
+import Testimonial from './Testimonial';
 
 export {
 	CaseStudyStats,
 	ConnectedProduct,
 	ProductVideo,
 	TeamMember,
+	Testimonial,
 };
 
 export const components = {
@@ -17,4 +19,5 @@ export const components = {
 	connected_product: ConnectedProduct,
 	product_video: ProductVideo,
 	team_member: TeamMember,
+	testimonial: Testimonial,
 };

@@ -99,5 +99,8 @@ export const actions ={
 
 		const comingsoon =  await this.$prismic.api.getSingle('comingSoon')
 		commit('setContent', {comingsoon})
+
+		const testimonials =  await this.$prismic.api.getSingle('testimonials')
+		commit('setContent', {testimonials})
     },
 }

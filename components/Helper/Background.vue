@@ -1,6 +1,6 @@
 <template lang="pug">
 .lightbg
-	.curtain(:style="{ top: offset }")
+	.curtain(:style="{ top: offset }" :class="{'has-border-top' : hasBorderTop}")
 	slot
 </template>
 
@@ -10,6 +10,10 @@ export default {
 		offset:{
 			type: String,
 			default: '16rem'
+		},
+		hasBorderTop:{
+			type:Boolean,
+			default:false
 		}
 	}
 }
@@ -26,4 +30,6 @@ export default {
 		background $bg
 		z-index -1
 		border-bottom 1px solid darken($bg,5%)
+	.has-border-top
+		border-top 1px solid darken($bg,5%)
 </style>

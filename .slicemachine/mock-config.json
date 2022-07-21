@@ -58,7 +58,8 @@
       }
     },
     "herosection": {},
-    "comingSoon": {}
+    "comingSoon": {},
+    "testimonials": {}
   },
   "slices": {
     "TeamMember": {
@@ -91,6 +92,11 @@
       "default": {
         "primary": {},
         "items": {}
+      }
+    },
+    "Testimonial": {
+      "default": {
+        "primary": {}
       }
     }
   }

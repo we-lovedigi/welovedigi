@@ -11,6 +11,11 @@ main
 		h2 Case Studies & Stories
 		p Increase your employee happiness by giving them access to our products. Make their workplace be a happy place.
 	LazyCaseStudiesList
+	HelperBackground(offset="0" hasBorderTop)
+		LazyHelperSectionTitle(center)
+			.h5 Testimonials
+			h2 What's said about us
+		LazyTestimonials
 	LazyHelperSectionTitle
 		.h5 Meet the team
 		h2 Our Founders

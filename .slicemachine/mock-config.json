@@ -59,7 +59,15 @@
     },
     "herosection": {},
     "comingSoon": {},
-    "testimonials": {}
+    "testimonials": {},
+    "services": {
+      "bodytext": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "TeamMember": {

@@ -75,7 +75,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/sean/Sites/kailbert-github/welovedigi/.slicemachine/assets/slices/CaseStudyStats/default/preview.png",
+            "path": "/Users/sean/sites/welovedigi/.slicemachine/assets/slices/CaseStudyStats/default/preview.png",
             "width": 800,
             "height": 128
           }
@@ -135,7 +135,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/sean/Sites/kailbert-github/welovedigi/slices/ConnectedProduct/default/preview.png",
+            "path": "/Users/sean/sites/welovedigi/slices/ConnectedProduct/default/preview.png",
             "width": 720,
             "height": 198
           }
@@ -231,7 +231,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/sean/Sites/kailbert-github/welovedigi/slices/ProductVideo/default/preview.png",
+            "path": "/Users/sean/sites/welovedigi/slices/ProductVideo/default/preview.png",
             "width": 2720,
             "height": 1126
           }
@@ -362,7 +362,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/sean/Sites/kailbert-github/welovedigi/slices/TeamMember/default/preview.png",
+            "path": "/Users/sean/sites/welovedigi/slices/TeamMember/default/preview.png",
             "width": 1452,
             "height": 1180
           }
@@ -449,7 +449,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/sean/Sites/kailbert-github/welovedigi/.slicemachine/assets/slices/Testimonial/default/preview.png",
+            "path": "/Users/sean/sites/welovedigi/.slicemachine/assets/slices/Testimonial/default/preview.png",
             "width": 800,
             "height": 128
           }

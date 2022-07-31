@@ -6,6 +6,10 @@ main
 		h2 Our Products
 	HelperBackground(offset="0")
 		LazyProductsList
+	LazyHelperSectionTitle()
+		.h5 We assist
+		h2 Our Services
+	LazyServicesList
 	LazyHelperSectionTitle(center)
 		.h5 Have a look
 		h2 Case Studies & Stories

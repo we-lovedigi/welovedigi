@@ -20,6 +20,10 @@ export const state = () => ({
 				link: '/products'
 			},
 			{
+				name: 'Services',
+				link: '/services'
+			},
+			{
 				name: 'Case Studies & Stories',
 				link: '/casestudies'
 			},
@@ -102,5 +106,11 @@ export const actions ={
 
 		const testimonials =  await this.$prismic.api.getSingle('testimonials')
 		commit('setContent', {testimonials})
+		
+		const services = await this.$prismic.api.query(
+			this.$prismic.predicates.at('document.type','services')
+		)
+		commit('setContent', {services: services.results})
+
     },
 }

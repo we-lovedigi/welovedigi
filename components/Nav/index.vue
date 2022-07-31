@@ -105,7 +105,7 @@ export default {
 		gap 2rem
 		padding 2rem 4rem
 		pointer-events auto
-		+bp(1124px)
+		+bp(1149px)
 			grid-template-columns auto auto
 	&__logo
 		max-width 18rem
@@ -116,10 +116,10 @@ export default {
 		a
 			bold()
 			font-size 1.3rem
-		+bp(1124px)
+		+bp(1149px)
 			display none
 		li + li
-			margin-left 4.2rem
+			margin-left 3.2rem
 	&__cta
 		justify-self end
 		position relative
@@ -129,7 +129,7 @@ export default {
 		a
 			bold()
 			font-size 1.3rem
-		+bp(1124px)
+		+bp(1149px)
 			display none
 		.dot
 			position absolute
@@ -160,7 +160,7 @@ export default {
 			svg
 				width 2.4rem
 				height @width
-		+bp(1124px)
+		+bp(1149px)
 			display block
 	&.is-light
 		background transparent
@@ -207,7 +207,7 @@ export default {
 		z-index -1
 		position relative
 		display none
-		+bp(1124px)
+		+bp(1149px)
 			display block
 		li
 			line-height 3

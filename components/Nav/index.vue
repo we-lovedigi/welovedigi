@@ -57,7 +57,7 @@ export default {
 			}
 		},
 		setSubNavHover: function(name){
-			if(name == 'Home' || name  == 'Meet the Team' || name == 'Coming Soon' || name == 'Services') {
+			if(name == 'Home' || name  == 'Meet the Team' || name == 'Coming Soon') {
 				this.closeSubNav()
 			}
 			else{

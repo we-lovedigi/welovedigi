@@ -449,9 +449,9 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/sean/sites/welovedigi/slices/Testimonial/default/preview.png",
-            "width": 890,
-            "height": 504
+            "path": "/Users/sean/sites/welovedigi/.slicemachine/assets/slices/Testimonial/default/preview.png",
+            "width": 800,
+            "height": 128
           }
         }
       }

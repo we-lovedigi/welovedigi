@@ -109,6 +109,13 @@
           "label": "Events Navigation Featured Text",
           "placeholder": ""
         }
+      },
+      "servicesNavigationFeaturedText": {
+        "type": "Text",
+        "config": {
+          "label": "Services Navigation Featured Text",
+          "placeholder": ""
+        }
       }
     }
   }

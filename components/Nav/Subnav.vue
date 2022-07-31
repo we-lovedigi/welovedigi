@@ -36,6 +36,18 @@
 				h5 Newest events
 				.subnav__list__products
 					EventsThumb(v-for="p in events.slice(0,2)" :doc="p" :key="p.uid")
+		section(v-if="content == 'Services'")
+			.subnav__intro
+				div
+					h5 On the services page:
+					nuxt-link(to="/services") All of our services
+				div
+					h5 Featured content:
+					p {{$store.state.content.metadata.data.servicesNavigationFeaturedText}}
+			.subnav__list
+				h5 Services
+				.subnav__list__services
+					ServicesThumb(v-for="p in services.slice(0,3)" :service="p" :key="p.uid")
 </template>
 
 <script>
@@ -55,6 +67,9 @@ export default {
 		},
 		events(){
 			return this.$store.state.content.events
+		},
+		services(){
+			return this.$store.state.content.services
 		}
 	}
 }
@@ -108,6 +123,10 @@ export default {
 		&__products
 			display grid
 			grid-template-columns 1fr 1fr
+			gap 2rem 6rem
+		&__services
+			display grid
+			grid-template-columns 1fr 1fr 1fr
 			gap 2rem 6rem
 	&.is-visible
 		opacity 1

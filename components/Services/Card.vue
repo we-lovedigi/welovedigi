@@ -37,6 +37,9 @@ export default {
 			object-fit cover
 			object-position center
 	&__title
+		border-top 1px solid $black
+		margin-top .6rem
+		padding-top 1.2rem
 		+mobile()
 			font-size 1.4rem
 	&__subtitle

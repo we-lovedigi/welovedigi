@@ -42,8 +42,23 @@ export default {
     '@nuxtjs/style-resources',
 	["@nuxtjs/prismic", {
 		endpoint: smConfig.apiEndpoint|| ""
-	}]
+	}],
+	'@nuxtjs/google-gtag',
   ],
+
+  'google-gtag': {
+    id: 'G-41EENVRKGQ',
+    config: {
+      anonymize_ip: true, // anonymize IP
+    //   send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+    //   linker: {
+    //     domains: ['domain.com','domain.org']
+    //   }
+    },
+    debug: true, // enable to track in dev mode
+    // disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...).
+
+  },
 
   image: {
     provider: "prismic",

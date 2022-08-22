@@ -12,7 +12,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'The flexible event solution' },
+      { hid: 'description', name: 'description', content: 'The flexible event solution. Create outstanding event landing pages with ease.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -57,7 +57,7 @@ export default {
     },
     debug: true, // enable to track in dev mode
     // disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...).
-
+	disableAutoPageTrack: true,
   },
 
   image: {

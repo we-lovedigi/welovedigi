@@ -23,12 +23,12 @@ export default {
 				{
 					hid: 'og:title',
 					property: 'og:title',
-					content: 'WeLoveDigi'
+					content: 'We Love Digi'
 				},
 				{
 					hid: 'og:description',
 					property: 'og:description',
-					content: "The flexible event solution."
+					content: "The flexible event solution. Create outstanding event landing pages with ease."
 				}
 			]
 		}

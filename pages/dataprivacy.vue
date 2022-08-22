@@ -8,7 +8,10 @@ export default {
 		doc(){
 			return this.$store.state.content.dataprivacy
 		}
-	}
+	},
+	head:{
+        title: 'Data Privacy - We Love Digi',
+    }
 }
 </script>
 

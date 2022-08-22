@@ -4,6 +4,9 @@
 
 <script>
 export default {
+	head:{
+        title: 'Coming Soon - We Love Digi',
+    }
 }
 </script>
 

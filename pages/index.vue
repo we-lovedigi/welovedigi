@@ -32,7 +32,10 @@ main
 
 <script>
 export default {
-	layout: 'lightNav'
+	layout: 'lightNav',
+	head:{
+        title: 'We Love Digi',
+    }
 }
 </script>
 

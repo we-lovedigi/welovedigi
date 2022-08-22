@@ -18,7 +18,7 @@ export default {
 		}
 	},
 	head:{
-        title: 'Case Study - WeLoveDigi',
+        title: 'Case Study - We Love Digi',
     }
 }
 </script>

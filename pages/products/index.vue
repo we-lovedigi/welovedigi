@@ -9,6 +9,9 @@ main
 
 <script>
 export default {
+	head:{
+        title: 'Products - We Love Digi',
+    }
 }
 </script>
 

@@ -19,7 +19,7 @@ export default {
 		}
 	},
 	head:{
-        title: 'Services - WeLoveDigi',
+        title: 'Services - We Love Digi',
     }
 }
 </script>

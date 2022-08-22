@@ -21,7 +21,7 @@ export default {
 
 	},
 	head:{
-        title: 'Meet the team - WeLoveDigi',
+        title: 'Meet the team - We Love Digi',
     }
 
 }

@@ -10,6 +10,9 @@
 
 <script>
 export default {
+	head:{
+        title: 'Schedule a call - We Love Digi',
+    }
 }
 </script>
 

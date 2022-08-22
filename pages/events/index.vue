@@ -9,7 +9,7 @@ main
 <script>
 export default {
 	head:{
-        title: 'Events - We Love Digi',
+        title: 'Events - WeLoveDigi',
     }
 }
 </script>

@@ -5,7 +5,7 @@
 <script>
 export default {
 	head:{
-        title: 'Coming Soon - We Love Digi',
+        title: 'Coming Soon - WeLoveDigi',
     }
 }
 </script>

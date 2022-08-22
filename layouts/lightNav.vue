@@ -23,7 +23,7 @@ export default {
 				{
 					hid: 'og:title',
 					property: 'og:title',
-					content: 'We Love Digi'
+					content: 'WeLoveDigi'
 				},
 				{
 					hid: 'og:description',

@@ -11,7 +11,7 @@
 <script>
 export default {
 	head:{
-        title: 'Schedule a call - We Love Digi',
+        title: 'Schedule a call - WeLoveDigi',
     }
 }
 </script>

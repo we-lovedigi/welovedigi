@@ -18,7 +18,7 @@ export default {
 		}
 	},
 	head:{
-        title: 'Event - We Love Digi',
+        title: 'Event - WeLoveDigi',
     }
 }
 </script>

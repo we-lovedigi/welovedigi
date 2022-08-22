@@ -11,7 +11,7 @@ main
 <script>
 export default {
 	head:{
-        title: 'Meet the team - We Love Digi',
+        title: 'Meet the team - WeLoveDigi',
     }
 }
 </script>

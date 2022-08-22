@@ -10,7 +10,7 @@ export default {
 		}
 	},
 	head:{
-        title: 'Data Privacy - We Love Digi',
+        title: 'Data Privacy - WeLoveDigi',
     }
 }
 </script>

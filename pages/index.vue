@@ -34,7 +34,7 @@ main
 export default {
 	layout: 'lightNav',
 	head:{
-        title: 'We Love Digi',
+        title: 'WeLoveDigi',
     }
 }
 </script>

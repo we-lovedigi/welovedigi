@@ -17,11 +17,17 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
-    ]
+    ],
+	script: [
+		{
+		//   src: 'panorama.js',
+		},
+	  ],
   },
 
   plugins: [
-	{ src: '~plugins/vue-carousel-3d', ssr: false }
+	{ src: '~plugins/vue-carousel-3d', ssr: false },
+	{ src: '~/plugins/swiper.client.js', mode: 'client' }
   ],
 
   components: true,
@@ -76,6 +82,9 @@ export default {
   },
 
   build: {
-	transpile: ["@prismicio/vue"]
+	transpile: [
+		"@prismicio/vue",
+		'swiper/vue',
+	]
   }
 }

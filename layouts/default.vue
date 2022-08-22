@@ -32,6 +32,14 @@ export default {
 			]
 		}
 	},
+	mounted() {
+		if (process.browser) {
+			this.$gtag('config', 'G-41EENVRKGQ', {
+				page_title: this.$metaInfo.title,
+				page_path: this.$route.fullPath,
+			})
+		}
+  	}
 }
 </script>
 

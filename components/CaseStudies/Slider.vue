@@ -6,8 +6,10 @@
 					.slide-content
 						CaseStudiesSlide(:doc="doc")
 			.swiper-pagination
-			//- .swiper-button-prev
-			//- .swiper-button-next
+			.swiper-button-prev
+			.swiper-button-next
+		.slider__all-btn
+			HelperButton(to="/casestudies") See all Stories
 </template>
 
 <script>
@@ -42,21 +44,21 @@ export default {
 				// when window width is >= 320px
 				340: {
 					slidesPerView: 1.5,
-					spaceBetween: 5
+					spaceBetween: 0
 				},
 				// when window width is >= 480px
 				580: {
 					slidesPerView: 2,
-					spaceBetween: 10
+					spaceBetween: 0
 				},
 				// when window width is >= 640px
 				840: {
 					slidesPerView: 3.5,
-					spaceBetween: 20
+					spaceBetween: 0
 				},
 				1024: {
 					slidesPerView: 4.5,
-					spaceBetween: 30
+					spaceBetween: 0
 				}
 			},
 			on: {
@@ -80,12 +82,61 @@ export default {
 @import 'node_modules/swiper/swiper-bundle.min.css';
 .slider
 	overflow hidden
-	padding 8rem 0
+	padding 10rem 0
+	+bp(1980px)
+		padding 6rem 0
+	+mobile()
+		padding 2rem 0
+	&__all-btn
+		margin 0 auto
+		max-width $pagewidth
+		display flex
+		justify-content center
+		margin-top -6rem
+		margin-bottom 4rem
 .swiper-panorama
 	overflow visible
 .swiper-slide-active
+	.caseslide
+		background $bg
 	.caseslide__text
 		opacity 1
 		transform translate3d(0,0,0)
 		transition all 100ms ease
+.swiper-button-next,.swiper-button-prev
+	border 1px solid $black
+	width 4.2rem
+	height @width
+	padding 1.2rem
+	border-radius 50%
+	color $black
+	top auto
+	bottom 15%
+	+bp(1968px)
+		bottom 25%
+	&::after
+		font-size 1.6rem
+	&:hover
+		color $primary
+		border-color $primary
+.swiper-button-next
+	right 35%
+	+bp(1024px)
+		right 30%
+	+bp(840px)
+		right 4rem
+	+mobile()
+		right 1rem
+	&::after
+		transform translateX(.1rem)
+.swiper-button-prev
+	left 35%
+	+bp(1024px)
+		left 30%
+	+bp(840px)
+		left 4rem
+	+mobile()
+		left 1rem
+	&::after
+		transform translateX(-.1rem)
 </style>

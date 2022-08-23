@@ -1,6 +1,6 @@
 <template lang="pug">
 	li.caseslide
-		.casecard__image.cursor
+		.caseslide__image.cursor
 			nuxt-picture(:src="doc.data.image.url" alt="image")
 		.caseslide__text
 			.h5 Case Study
@@ -34,16 +34,17 @@ export default {
 <style lang="stylus">
 .caseslide
 	height 100%
+	background transparent
+	padding 2rem
 	&__image
 		display block
-		aspect-ratio 16/10
 		objectFitImage()
-		clip-path polygon(0 0, 100% 0, 100% 90%, 94% 100%, 0% 100%)
+		aspect-ratio 16/16
+		clip-path polygon(0 0, 100% 0, 100% 94%, 94% 100%, 0% 100%)
 		margin-bottom 1.2rem
 	&__text
 		opacity 0
-		border-bottom 1px solid $black
-		padding-bottom 2.4rem
+		padding-bottom 0rem
 		transition all 300ms ease
 		transform translate3d(0,2rem,0)
 	.h5

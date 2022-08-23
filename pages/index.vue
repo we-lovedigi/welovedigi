@@ -13,7 +13,7 @@ main
 	LazyHelperSectionTitle(center)
 		.h5 Have a look
 		h2 Case Studies & Stories
-		p Increase your employee happiness by giving them access to our products. Make their workplace be a happy place.
+		p {{$store.state.content.metadata.data.caseStudiesSectionIntroduction}}
 	LazyCaseStudiesSlider
 	//- LazyCaseStudiesList
 	HelperBackground(offset="0" hasBorderTop)

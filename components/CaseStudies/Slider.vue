@@ -43,20 +43,24 @@ export default {
 			breakpoints: {
 				// when window width is >= 320px
 				340: {
+					allowTouchMove: true,
 					slidesPerView: 1.5,
 					spaceBetween: 0
 				},
 				// when window width is >= 480px
 				580: {
+					allowTouchMove: true,
 					slidesPerView: 2,
 					spaceBetween: 0
 				},
 				// when window width is >= 640px
 				840: {
+					allowTouchMove: false,
 					slidesPerView: 3.5,
 					spaceBetween: 0
 				},
 				1024: {
+					allowTouchMove: false,
 					slidesPerView: 4.5,
 					spaceBetween: 0
 				}
@@ -112,6 +116,7 @@ export default {
 	color $black
 	top auto
 	bottom 15%
+	z-index 9
 	+bp(1968px)
 		bottom 25%
 	&::after

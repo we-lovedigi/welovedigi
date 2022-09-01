@@ -1,12 +1,13 @@
 <template lang="pug">
 	li.caseslide
-		.caseslide__image.cursor
+		nuxt-link(:to="'/casestudies/' +doc.uid").caseslide__image
 			nuxt-picture(:src="doc.data.image.url" alt="image")
 		.caseslide__text
 			.h5 Case Study
-			h3 {{doc.data.title}}
+			nuxt-link(:to="'/casestudies/' +doc.uid")
+				h3 {{doc.data.title}}
 			//- p {{doc.data.bodytext[0].text | truncate(110)}}
-			HelperButton(:to="'/casestudies/' +doc.uid") Read more
+			HelperButton(:to="	'/casestudies/' +doc.uid") Read more
 </template>
 
 <script>
@@ -42,6 +43,7 @@ export default {
 		aspect-ratio 16/16
 		clip-path polygon(0 0, 100% 0, 100% 94%, 94% 100%, 0% 100%)
 		margin-bottom 1.2rem
+		pointer-events none
 	&__text
 		opacity 0
 		padding-bottom 0rem
@@ -68,7 +70,4 @@ export default {
 				opacity 1
 		svg
 			color $primary
-	.cursor
-		&:hover
-			cursor url('assets/cursor.svg'), auto;
 </style>

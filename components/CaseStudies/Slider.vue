@@ -101,12 +101,21 @@ export default {
 .swiper-panorama
 	overflow visible
 .swiper-slide-active
+	&:hover
+		cursor url('assets/cursor.svg') 50 50, auto;
 	.caseslide
 		background $bg
+	.caseslide__image
+		pointer-events auto
+		&:hover
+			cursor url('assets/cursor.svg') 50 50, auto;
 	.caseslide__text
 		opacity 1
 		transform translate3d(0,0,0)
 		transition all 100ms ease
+		h3
+			&:hover
+				cursor url('assets/cursor.svg') 50 50, auto;
 .swiper-button-next,.swiper-button-prev
 	border 1px solid $black
 	width 4.2rem

@@ -8,7 +8,7 @@
 		.hero__headline
 			p {{content.subtitle}}
 			h1 {{content.headline}}
-			HelperButton(:to="content.buttonLink") Discover more
+			HelperButton(:to="content.buttonLink" islink) Discover more
 		.hero__aside
 			include ./assets/scroll.svg
 </template>

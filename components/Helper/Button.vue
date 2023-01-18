@@ -1,5 +1,5 @@
 <template lang="pug">
-	a(:href="to" target="_blank" rel="noopener" v-if="islink").btn
+	a(:href="to" rel="noopener" v-if="islink").btn
 		.btn__arrow
 			include ./assets/arrow-right.svg
 			.circle

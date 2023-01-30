@@ -1,4 +1,5 @@
 import smConfig from "./sm.json"
+import prismic from '@nuxtjs/prismic'
 
 export default {
 
@@ -50,7 +51,18 @@ export default {
 		endpoint: smConfig.apiEndpoint|| ""
 	}],
 	'@nuxtjs/google-gtag',
+	'@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+	routes: [
+		'https://neo.we-lovedigi.com',
+		'https://neo.we-lovedigi.com/home',
+		'https://neo.we-lovedigi.com/pricing-model',
+		'https://neo.we-lovedigi.com/free-trial',
+		'https://neo.we-lovedigi.com/login',
+	]
+  },
 
   'google-gtag': {
     id: 'G-41EENVRKGQ',

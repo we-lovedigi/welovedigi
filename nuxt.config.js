@@ -60,16 +60,16 @@ export default {
     hostname: 'https://www.we-lovedigi.com',
     sitemaps: [
       {
+		hostname: 'https://www.we-lovedigi.com',
         path: '/sitemap-www.xml',
       },
 	  {
     	path: '/sitemap-neo.xml',
-    	hostname: 'https://neo.we-lovedigi.com',
 		routes: [
-			'/home',
-			'/pricing-model',
-			'/free-trial',
-			'/login',
+			'https://neo.we-lovedigi.com/home',
+			'https://neo.we-lovedigi.com/home/pricing-model',
+			'https://neo.we-lovedigi.com/home/free-trial',
+			'https://neo.we-lovedigi.com/home/login',
         ],
 		exclude: [
 			'/preview',

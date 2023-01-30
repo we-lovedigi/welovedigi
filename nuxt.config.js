@@ -51,41 +51,7 @@ export default {
 		endpoint: smConfig.apiEndpoint|| ""
 	}],
 	'@nuxtjs/google-gtag',
-	'@nuxtjs/sitemap'
   ],
-
-  sitemap: {
-	hostname: 'https://www.we-lovedigi.com',
-	path: '/sitemap.xml',
-    hostname: 'https://www.we-lovedigi.com',
-    sitemaps: [
-      {
-		hostname: 'https://www.we-lovedigi.com',
-        path: '/sitemap-www.xml',
-      },
-	  {
-    	path: '/sitemap-neo.xml',
-		routes: [
-			'https://neo.we-lovedigi.com/home',
-			'https://neo.we-lovedigi.com/home/pricing-model',
-			'https://neo.we-lovedigi.com/home/free-trial',
-			'https://neo.we-lovedigi.com/home/login',
-        ],
-		exclude: [
-			'/preview',
-			'/casestudies',
-			'/comingsoon',
-			'/dataprivacy',
-			'/events',
-			'/meettheteam',
-			'/products',
-			'/scheduleacall',
-			'/services',
-			'/slice-simulator'
-		],
-      },
-    ],
-  },
 
   'google-gtag': {
     id: 'G-41EENVRKGQ',

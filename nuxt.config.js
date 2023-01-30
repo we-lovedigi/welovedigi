@@ -55,13 +55,36 @@ export default {
   ],
 
   sitemap: {
-	routes: [
-		'https://neo.we-lovedigi.com',
-		'https://neo.we-lovedigi.com/home',
-		'https://neo.we-lovedigi.com/pricing-model',
-		'https://neo.we-lovedigi.com/free-trial',
-		'https://neo.we-lovedigi.com/login',
-	]
+	hostname: 'https://www.we-lovedigi.com',
+	path: '/sitemap.xml',
+    hostname: 'https://www.we-lovedigi.com',
+    sitemaps: [
+      {
+        path: '/sitemap-www.xml',
+      },
+	  {
+    	path: '/sitemap-neo.xml',
+    	hostname: 'https://neo.we-lovedigi.com',
+		routes: [
+			'/home',
+			'/pricing-model',
+			'/free-trial',
+			'/login',
+        ],
+		exclude: [
+			'/preview',
+			'/casestudies',
+			'/comingsoon',
+			'/dataprivacy',
+			'/events',
+			'/meettheteam',
+			'/products',
+			'/scheduleacall',
+			'/services',
+			'/slice-simulator'
+		],
+      },
+    ],
   },
 
   'google-gtag': {

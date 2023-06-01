@@ -21,7 +21,7 @@
 			aside.blogpost__aside
 				h5 Other blogposts:
 				ul.blogpost__otherposts
-					li(v-for="allpost in allPosts.slice(0,5)")
+					li(v-for="allpost in allPostsWithoutCurrent.slice(0,5)")
 						nuxt-link(:to="'/blog/' + allpost.uid").blogpost__asidepost
 							.blogpost__asideimage
 								nuxt-picture(:src="allpost.data.image.url" alt="image")
@@ -56,6 +56,14 @@ export default {
 		allPosts:{
 			type: Array,
 			default: () => {}
+		}
+	},
+	computed:{
+		allPostsWithoutCurrent(){
+			let posts = this.allPosts.filter(x =>{
+				return x.data.title != this.post.title
+			})
+			return posts
 		}
 	},
 	methods:{

@@ -2,6 +2,8 @@
 	.blog
 		section
 			ul.blog__tabs
+				li
+					h5 Categories:
 				li(v-for="cat in categories")
 					nuxt-link(:to="'/blog/category/' + cat") {{cat}}
 			ul.blog__list
@@ -46,16 +48,13 @@ export default {
 		margin-bottom 4.2rem
 		display flex
 		align-items center
-		justify-content center
+		justify-content start
 		li
-			headline()
-			font-size 2rem
-			letter-spacing .1rem
-			color $text-light
+			font-size 1.2rem
+			bold()
 			cursor pointer
-			+mobile()
-				text-align center
-				font-size 1.8rem
+			a
+				color $black
 			+ li
 				margin-left clamp(2rem, 4vw, 6rem)
 			&.is-active

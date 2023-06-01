@@ -56,6 +56,8 @@ export default {
 	display block
 	position relative
 	transition all 600ms ease
+	border-bottom 1px solid $black
+	padding-bottom 2.4rem
 	&__image
 		width 100%
 		aspect-ratio 16/9
@@ -75,7 +77,6 @@ export default {
 		justify-content flex-start
 		z-index 3
 		position relative
-		border-top 1px solid $black
 		padding-top 1.2rem
 		padding-bottom 1.2rem
 		margin-top 1.2rem

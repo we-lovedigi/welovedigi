@@ -1,8 +1,11 @@
 <template lang="pug">
 	.blogpost
-		PageHeader(:image="post.image.url" :title="post.title[0].text" subtitle="Blogpost")
+		.blogpost__header
+			.blogpost__image
+				nuxt-picture(:src="post.image.url")
 		section.blogpost__body
 			.blogpost__bodytext
+				h1 {{post.title}}
 				prismic-rich-text(:field="post.bodytext")
 				ul.blogpost__meta
 					li
@@ -16,13 +19,14 @@
 						nuxt-link(:to="'/blog/category/' + post.category")
 							span {{post.category}}
 			aside.blogpost__aside
+				h5 Other blogposts:
 				ul.blogpost__otherposts
 					li(v-for="allpost in allPosts.slice(0,5)")
 						nuxt-link(:to="'/blog/' + allpost.uid").blogpost__asidepost
 							.blogpost__asideimage
 								nuxt-picture(:src="allpost.data.image.url" alt="image")
 							.blogpost__asidetext
-								h3 {{allpost.data.title[0].text}}
+								h3 {{allpost.data.title}}
 								ul.blogpost__asidemeta
 									li
 										include ./assets/calendar.svg
@@ -64,6 +68,21 @@ export default {
 
 <style lang="stylus">
 .blogpost
+	&__header
+		width 100%
+		background $bg
+		margin-bottom 6rem
+		overflow visible
+		border-bottom 1px solid rgba($primary,.1)
+	&__image
+		section()
+		padding-bottom 0
+		img,picture
+			margin-bottom -6rem
+			aspect-ratio 16/9
+			object-fit cover
+			object-position center center
+			border-radius .2rem
 	&__body
 		section()
 		display grid
@@ -74,6 +93,9 @@ export default {
 		+mobile()
 			grid-template-columns 1fr
 	&__bodytext
+		h1
+			letter-spacing -.125rem
+			line-height 1
 		h5
 			text-transform none
 			margin 0
@@ -114,18 +136,14 @@ export default {
 			gap .6rem
 			align-items center
 			color $text-light
-			+mobile()
-				font-size 1.2rem
+			font-size 1.2rem
+			margin 0 2.4rem 0 0 !important
+			span
+				font-size 1.4rem
 			svg
 				color $primary
-			+ li
-				margin-left 2.4rem
 	&__otherposts
-		background rgba($text,.1)
-		border-radius 1.3rem
-		padding 4rem
-		+mobile()
-			padding 2rem
+		padding-top 2.4rem
 		> li
 			+ li
 				margin-top 2.4rem
@@ -138,13 +156,11 @@ export default {
 			grid-template-columns 4.2rem auto
 			gap 1.2rem
 		h3
-			line-height .8
-			+mobile()
-				margin 0
+			line-height 1
+			font-size 1.8rem
 	&__asideimage
 		width 100%
 		aspect-ratio 1/1
-		border-radius .7rem
 		overflow hidden
 		position relative
 		img,picture
@@ -177,8 +193,7 @@ export default {
 		align-items center
 		color $primary
 		headline()
-		font-size 2rem
-		margin-top 10.2rem
+		font-size 1.4rem
 		svg
 			transform scale(-1,1)
 			margin-top -.3rem

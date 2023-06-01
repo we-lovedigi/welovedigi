@@ -47,7 +47,7 @@ export const state = () => ({
 			phone: '58158158119',
 			phoneNice: '+49 124 124124',
 			email: 'hello@we-lovedigi.com'
-		}
+		},
 	}
 })
 
@@ -57,7 +57,7 @@ export const mutations = {
     },
 	showEmbedModal(state, object){
 		state.embedModal = object
-	}
+	},
 }
 
 export const actions ={
@@ -69,6 +69,10 @@ export const actions ={
 		)
 		commit('setContent', {products: products.results})
 
+		const blogposts = await this.$prismic.api.query(
+			this.$prismic.predicates.at('document.type','blogposts')
+		)
+		commit('setContent', {blogposts: blogposts.results})
 		// Case Studies
 		const casestudies = await this.$prismic.api.query(
 			this.$prismic.predicates.at('document.type','casestudie')
@@ -106,7 +110,7 @@ export const actions ={
 
 		const testimonials =  await this.$prismic.api.getSingle('testimonials')
 		commit('setContent', {testimonials})
-		
+
 		const services = await this.$prismic.api.query(
 			this.$prismic.predicates.at('document.type','services')
 		)

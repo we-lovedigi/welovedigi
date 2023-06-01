@@ -67,6 +67,14 @@
           "blocks": 1
         }
       }
+    },
+    "blogposts": {
+      "bodytext": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
     }
   },
   "slices": {

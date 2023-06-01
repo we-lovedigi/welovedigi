@@ -32,7 +32,6 @@ export default {
 		border-top 1px solid $black
 		h5
 			padding-top .6rem
-
 		h3
 			margin-top .6rem
 			font-size 1.2rem

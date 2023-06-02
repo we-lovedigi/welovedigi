@@ -53,7 +53,7 @@ export default {
 		margin-bottom 4.2rem
 		display flex
 		align-items center
-		justify-content start
+		justify-content flex-start
 		li
 			font-size 1.2rem
 			bold()

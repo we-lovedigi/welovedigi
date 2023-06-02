@@ -45,6 +45,9 @@ export default {
 			subNavContent: 'Products'
 		}
 	},
+	mounted(){
+		console.log(this.$store.state.metadata.navItems)
+	},
 	methods:{
 		toggleBurger: function(){
 			this.burgerOpen = !this.burgerOpen
@@ -57,7 +60,7 @@ export default {
 			}
 		},
 		setSubNavHover: function(name){
-			if(name == 'Home' || name  == 'Meet the Team' || name == 'Coming Soon') {
+			if(name == 'Home' || name  == 'Meet the Team' || name == 'Coming Soon' || name == 'Blog') {
 				this.closeSubNav()
 			}
 			else{
@@ -83,6 +86,7 @@ export default {
 </script>
 
 <style lang="stylus">
+$bpNav = 1223px
 .nav
 	border-bottom 1px solid rgba($black,.1)
 	background $white
@@ -105,7 +109,7 @@ export default {
 		gap 2rem
 		padding 2rem 4rem
 		pointer-events auto
-		+bp(1149px)
+		+bp($bpNav)
 			grid-template-columns auto auto
 	&__logo
 		max-width 18rem
@@ -116,7 +120,7 @@ export default {
 		a
 			bold()
 			font-size 1.3rem
-		+bp(1149px)
+		+bp($bpNav)
 			display none
 		li + li
 			margin-left 3.2rem
@@ -129,7 +133,7 @@ export default {
 		a
 			bold()
 			font-size 1.3rem
-		+bp(1149px)
+		+bp($bpNav)
 			display none
 		.dot
 			position absolute
@@ -160,7 +164,7 @@ export default {
 			svg
 				width 2.4rem
 				height @width
-		+bp(1149px)
+		+bp($bpNav)
 			display block
 	&.is-light
 		background transparent
@@ -207,7 +211,7 @@ export default {
 		z-index -1
 		position relative
 		display none
-		+bp(1149px)
+		+bp($bpNav)
 			display block
 		li
 			line-height 3

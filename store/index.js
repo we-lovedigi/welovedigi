@@ -37,7 +37,7 @@ export const state = () => ({
 			},
 			{
 				name: 'Blog',
-				link: '/blog'
+				link: '/blog',
 			},
 			{
 				name: 'Coming Soon',
@@ -65,7 +65,7 @@ export const mutations = {
 }
 
 export const actions ={
-    async nuxtServerInit({ commit }){
+    async nuxtServerInit({ commit , state}){
 
 		// Products
 		const products = await this.$prismic.api.query(
@@ -77,6 +77,7 @@ export const actions ={
 			this.$prismic.predicates.at('document.type','blogposts')
 		)
 		commit('setContent', {blogposts: blogposts.results})
+
 		// Case Studies
 		const casestudies = await this.$prismic.api.query(
 			this.$prismic.predicates.at('document.type','casestudie')

@@ -107,15 +107,17 @@ export default {
 		h5
 			text-transform none
 			margin 0
-			font-size 1.8rem
-			letter-spacing 0px
 			bold()
 			margin-top 2.4rem
+			color $black
 		h4,h3,h2
 			margin-top 5.6rem
 			margin-bottom 1.2rem
+			color $black
 		b, strong
 			color $black
+		a, a *
+			color $primary
 		ul, ol
 			margin 2.4rem 0
 			li

@@ -1,6 +1,6 @@
 <template lang="pug">
 	.blog
-		section
+		section(v-if="posts.length >= 1")
 			ul.blog__tabs
 				li
 					h5 Categories:
@@ -10,6 +10,8 @@
 				li(v-for="post in posts")
 					nuxt-link(:to="'/blog/'+ post.uid")
 						BlogpostCard(:post="post.data" :uid="post.uid")
+		section(v-else).blog__empty
+			h1 There are no blogposts yet. #[br]Check back soon.
 </template>
 
 <script>
@@ -44,6 +46,9 @@ export default {
 		gap 4rem
 		+mobile()
 			grid-template-columns 1fr
+		> li > a
+			display block
+			height 100%
 	&__tabs
 		margin-bottom 4.2rem
 		display flex
@@ -55,10 +60,21 @@ export default {
 			cursor pointer
 			a
 				color $black
+				&:hover
+					color $primary
 			+ li
 				margin-left clamp(2rem, 4vw, 6rem)
 			&.is-active
 				color $primary
 				cursor default
 				pointer-events none
+	&__empty
+		display flex
+		align-items center
+		justify-content center
+		min-height 75vh
+		h1
+			text-align center
+			font-size 3.2rem
+			line-height 1
 </style>

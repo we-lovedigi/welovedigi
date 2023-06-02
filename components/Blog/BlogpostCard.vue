@@ -15,6 +15,7 @@
 		.blogpostcard__text
 			h3 {{post.title}}
 			p {{post.bodytext[0].text | truncate(110)}}
+		.blogpostcard__action
 			HelperButton(:to="'/blog/'+ uid").readmore Read more
 </template>
 
@@ -53,11 +54,13 @@ export default {
 
 <style lang="stylus">
 .blogpostcard
-	display block
 	position relative
 	transition all 600ms ease
 	border-bottom 1px solid $black
 	padding-bottom 2.4rem
+	display flex
+	flex-direction column
+	height 100%
 	&__image
 		width 100%
 		aspect-ratio 16/9
@@ -103,4 +106,6 @@ export default {
 			line-height 1.2
 			margin-bottom 0
 			padding-bottom 0
+	&__action
+		margin-top auto
 </style>

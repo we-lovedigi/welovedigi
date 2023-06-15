@@ -39,10 +39,10 @@ export const state = () => ({
 				name: 'Blog',
 				link: '/blog',
 			},
-			{
-				name: 'Coming Soon',
-				link: '/comingsoon'
-			},
+			// {
+			// 	name: 'Coming Soon',
+			// 	link: '/comingsoon'
+			// },
 		],
 		address: {
 			street: 'Im Blumenkübel 12',

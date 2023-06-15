@@ -104,6 +104,9 @@ export default {
 		h1
 			letter-spacing -.125rem
 			line-height 1
+			font-size 6.2rem
+			+mobile()
+				font-size 3.2rem
 		h5
 			text-transform none
 			margin 0

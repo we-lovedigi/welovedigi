@@ -28,7 +28,8 @@ export default {
 
   plugins: [
 	{ src: '~plugins/vue-carousel-3d', ssr: false },
-	{ src: '~/plugins/swiper.client.js', mode: 'client' }
+	{ src: '~/plugins/swiper.client.js', mode: 'client' },
+  { src: '~/plugins/uxcam.client.js', mode: 'client' }
   ],
 
   components: true,

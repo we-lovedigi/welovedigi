@@ -41,6 +41,12 @@ export default {
 		title: "WeLoveDigi",
 	},
 };
+
+export default {
+  mounted() {
+    this.$uxc.event('PageLoaded', { page: 'Home' })
+  }
+}
 </script>
 
 <style lang="stylus"></style>

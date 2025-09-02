@@ -30,8 +30,6 @@ main
 		h2 Our new recruits
 	LazyMeetTheTeamList(joiners v-if="$store.state.content.joiners")
 	
-	<iframe id="nevronixFrame" src="https://platform.nevronix.ai/?id=49&s=5653dd37-55ad-4107-977b-dce9db60f884" referrerpolicy="unsafe-url" sandbox="allow-scripts allow-same-origin allow-modals allow-top-navigation allow-popups allow-presentation allow-popups-to-escape-sandbox allow-forms" allow="camera;microphone;autoplay;" style="position: fixed; bottom: 0; right: 0; width: 540px; height: 520px; z-index: 99999; border: none; max-width: 100%; border-radius: 25px; transition: transform 300ms ease-out, opacity 300ms ease-out; opacity: 1; transform: scale(0.8); transform-origin: bottom right;">
-	</iframe>
 </template>
 
 <script>
@@ -41,12 +39,6 @@ export default {
 		title: "WeLoveDigi",
 	},
 };
-
-export default {
-  mounted() {
-    this.$uxc.event('PageLoaded', { page: 'Home' })
-  }
-}
 </script>
 
 <style lang="stylus"></style>
